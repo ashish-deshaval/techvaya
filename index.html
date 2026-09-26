@@ -1,81 +1,357 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="TECHVAYA SOLUTIONS — Connecting Technology. Empowering Enterprises.">
-<title>TECHVAYA SOLUTIONS | Connecting Technology. Empowering Enterprises.</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','sans-serif'],display:['Plus Jakarta Sans','Inter','sans-serif']},colors:{navy:'#07152f',cyan:'#08b7e8',teal:'#16c7a5'}}}};</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-<style>
-body{font-family:Inter,sans-serif}.display{font-family:'Plus Jakarta Sans',Inter,sans-serif}.glass{background:rgba(255,255,255,.78);backdrop-filter:blur(18px);border:1px solid rgba(148,163,184,.22)}.dark .glass{background:rgba(7,21,47,.78);border-color:rgba(148,163,184,.16)}.gridbg{background-image:linear-gradient(rgba(8,183,232,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(8,183,232,.06) 1px,transparent 1px);background-size:42px 42px}.gradtext{background:linear-gradient(90deg,#0878e6,#08b7e8,#16c7a5);-webkit-background-clip:text;background-clip:text;color:transparent}.reveal{opacity:0;transform:translateY(20px);transition:.7s ease}.reveal.show{opacity:1;transform:none}.card{transition:transform .3s,box-shadow .3s}.card:hover{transform:translateY(-4px);box-shadow:0 20px 55px rgba(7,21,47,.12)}.solution img{transition:transform .6s}.solution:hover img{transform:scale(1.05)}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TECHVAYA SOLUTIONS | Connecting Technology. Empowering Enterprises.</title>
+  <meta name="description" content="TECHVAYA SOLUTIONS is an OEM-agnostic enterprise technology systems integrator delivering Visitor Management, Video Analytics, EMS/BMS, RTLS and Perimeter Security solutions.">
+  <meta name="keywords" content="TECHVAYA, TECHVAYA SOLUTIONS, enterprise technology, systems integrator, visitor management, video analytics, EMS, BMS, RTLS, perimeter security, digital transformation">
+  <meta name="theme-color" content="#03162E">
+  <meta property="og:title" content="TECHVAYA SOLUTIONS | Connecting Technology. Empowering Enterprises.">
+  <meta property="og:description" content="Connecting technology ecosystems to empower enterprise operations, security and digital transformation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://techvaya.com/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85">
+  <link rel="canonical" href="https://techvaya.com/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: {
+        fontFamily: { sans:['Inter','sans-serif'], display:['Plus Jakarta Sans','Inter','sans-serif'] },
+        colors: { tv:{ abyss:'#020B18', navy:'#03162E', blue:'#0077FF', cyan:'#00A8FF', teal:'#00C88B', emerald:'#00D084' } }
+      }}
+    };
+  </script>
+  <style>
+    :root{--tv-navy:#03162E;--tv-blue:#0077FF;--tv-cyan:#00A8FF;--tv-teal:#00C88B;--light-bg:#F6F9FC;--light-card:#FFFFFF;--light-text:#0B172A;--light-muted:#526174;--light-border:#DCE5EF}
+    *{box-sizing:border-box}
+    html{scroll-padding-top:92px}
+    body{font-family:Inter,sans-serif;background:var(--light-bg);color:var(--light-text);overflow-x:hidden}
+    .display{font-family:'Plus Jakarta Sans',Inter,sans-serif}
+    .dark body{background:#020B18;color:#F8FAFC}
+    .glass-nav{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border:1px solid rgba(148,163,184,.24)}
+    .dark .glass-nav{background:rgba(3,22,46,.82);border-color:rgba(0,168,255,.16)}
+    .grid-bg{background-image:linear-gradient(rgba(0,168,255,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,139,.055) 1px,transparent 1px);background-size:46px 46px}
+    .hero-glow{background:radial-gradient(circle at 78% 25%,rgba(0,168,255,.18),transparent 31%),radial-gradient(circle at 20% 15%,rgba(0,119,255,.12),transparent 28%),radial-gradient(circle at 75% 85%,rgba(0,200,139,.12),transparent 30%)}
+    .brand-gradient{background:linear-gradient(90deg,#0077FF 0%,#00A8FF 50%,#00C88B 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .brand-button{background:linear-gradient(95deg,#0066E6 0%,#00A8FF 52%,#00C88B 100%);background-size:160% 160%;transition:.3s ease;box-shadow:0 0 26px rgba(0,168,255,.18)}
+    .brand-button:hover{background-position:right center;transform:translateY(-1px);box-shadow:0 0 32px rgba(0,200,139,.24)}
+    .card{background:rgba(255,255,255,.88);border:1px solid var(--light-border);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+    .dark .card{background:linear-gradient(145deg,rgba(6,33,66,.70),rgba(3,19,39,.90));border-color:rgba(0,168,255,.15)}
+    .card:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(3,22,46,.13);border-color:rgba(0,200,139,.38)}
+    .dark .card:hover{box-shadow:0 22px 50px rgba(0,168,255,.14)}
+    .solution-img{transition:transform .55s ease}.solution-card:hover .solution-img{transform:scale(1.045)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+    .section-rule{border-color:var(--light-border)}.dark .section-rule{border-color:rgba(255,255,255,.08)}
+    .muted{color:var(--light-muted)}.dark .muted{color:#AAB7C8}
+    .field{background:#fff;border:1px solid #D5DFEA;color:#0B172A;outline:none}.dark .field{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.13);color:#F8FAFC}.field:focus{border-color:#00A8FF;box-shadow:0 0 0 3px rgba(0,168,255,.10)}
+    .wa-button{background:#19A974;color:white;box-shadow:0 10px 28px rgba(25,169,116,.20)}
+    .wa-button:hover{background:#168F63;transform:translateY(-1px)}
+    .logo-word{letter-spacing:.12em}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}.card,.brand-button,.solution-img{transition:none}}
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-900 dark:bg-[#050d1d] dark:text-slate-100">
+<body class="antialiased selection:bg-tv-cyan selection:text-slate-950">
 
-<!-- =========================================================
-     TECHVAYA BRAND MARK
-     Technology + Anvaya (connection/integration).
-     Left side: circuit traces = technology.
-     Right side: connected nodes = integration.
-     ========================================================= -->
-<svg width="0" height="0" aria-hidden="true"><defs><linearGradient id="tv" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0878e6"/><stop offset=".55" stop-color="#08b7e8"/><stop offset="1" stop-color="#16c7a5"/></linearGradient></defs></svg>
+<!-- ================================================================
+     TECHVAYA IMAGE MANAGEMENT — CHANGE IMAGES HERE
+     You normally only need to edit the URLs in the SITE_IMAGES object.
+     Recommended: 1400px+ landscape images for solution/industry cards;
+     1600px+ for hero/about images. You may use your own CDN/local path.
+     ================================================================ -->
+<script>
+  const SITE_IMAGES = {
+    hero: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85',
+    about: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85',
+    visitor: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85',
+    video: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1400&q=85',
+    ems: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85',
+    rtls: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=85',
+    perimeter: 'https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1400&q=85',
+    itites: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85',
+    manufacturing: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1200&q=85',
+    pharma: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=85',
+    chemical: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=85',
+    commercial: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85',
+    logistics: 'https://images.unsplash.com/photo-1586528116493-da8e42c6c1b6?auto=format&fit=crop&w=1200&q=85'
+  };
+</script>
 
-<header class="fixed top-3 inset-x-3 sm:inset-x-6 z-50"><nav class="glass max-w-7xl mx-auto rounded-2xl shadow-lg"><div class="h-16 px-4 sm:px-6 flex items-center justify-between">
-<a href="#home" class="flex items-center gap-3" aria-label="TECHVAYA SOLUTIONS"><svg viewBox="0 0 190 64" class="h-10 w-auto"><defs><linearGradient id="navg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0878e6"/><stop offset=".55" stop-color="#08b7e8"/><stop offset="1" stop-color="#16c7a5"/></linearGradient></defs><path d="M13 32C13 12 39 7 52 20l40 36c12 11 34 3 34-14 0-17-20-29-34-17L52 59C38 71 13 62 13 42c0-5 0-8 0-10Z" fill="none" stroke="url(#navg)" stroke-width="11" stroke-linecap="round"/><path d="M25 24h18M25 30h13M25 36h10" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="44" cy="24" r="2" fill="white"/><circle cx="39" cy="30" r="2" fill="white"/><rect x="131" y="30" width="5" height="5" rx="1" fill="#16c7a5"/><rect x="140" y="22" width="7" height="7" rx="1" fill="#16c7a5"/><rect x="151" y="14" width="9" height="9" rx="1" fill="#16c7a5"/></svg><span class="hidden sm:block display font-extrabold tracking-[.16em]">TECHVAYA</span></a>
-<div class="hidden lg:flex gap-7 text-sm font-semibold text-slate-600 dark:text-slate-300"><a href="#home">Home</a><a href="#about">About</a><a href="#solutions">Solutions</a><a href="#industries">Industries</a><a href="#why-us">Why Us</a><a href="#contact">Contact</a></div>
-<div class="flex items-center gap-2"><button id="theme" class="w-10 h-10 rounded-xl hover:bg-slate-100 dark:hover:bg-white/10" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button><a href="#contact" class="hidden sm:inline-flex rounded-xl bg-slate-950 text-white px-4 py-2.5 text-sm font-bold dark:bg-white dark:text-slate-950">Request Demo <i class="fa-solid fa-arrow-right ml-2"></i></a><button id="menub" class="lg:hidden w-10 h-10 rounded-xl" aria-expanded="false"><i class="fa-solid fa-bars"></i></button></div></div>
-<div id="menu" class="hidden lg:hidden border-t border-slate-200/70 dark:border-white/10 p-3"><div class="grid text-sm font-semibold"><a class="p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10" href="#home">Home</a><a class="p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10" href="#about">About</a><a class="p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10" href="#solutions">Solutions</a><a class="p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10" href="#industries">Industries</a><a class="p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10" href="#why-us">Why Us</a><a class="p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10" href="#contact">Contact</a></div></div></nav></header>
+<!-- TECHVAYA WORDMARK IMAGES — embedded SVG images, no external asset required -->
+<script>
+  const TECHVAYA_WORDMARK_LIGHT = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 62">
+      <path d="M4 8H44V18H29.5V56H18.5V18H4Z" fill="#0B172A"/>
+      <path d="M54 8H92V17.5H65V27H88V36H65V46.5H93V56H54Z" fill="#0B172A"/>
+      <path d="M128 8C139 8 146 12 150 17L142 24C139 20 134 18 128 18C117 18 111 24 111 32C111 40 117 46 128 46C134 46 139 44 142 40L150 47C146 52 139 56 128 56C110 56 99 45 99 32C99 19 110 8 128 8Z" fill="#0B172A"/>
+      <path d="M160 8H171V27H193V8H204V56H193V37H171V56H160Z" fill="#0B172A"/>
+      <path d="M213 8H225L238 41L251 8H263L243 56H233Z" fill="#0B172A"/>
+      <path d="M286 7H296L317 56H305L291 21L277 56H265Z" fill="#0099FF"/>
+      <path d="M318 8H331L343 27L355 8H368L348.5 37V56H337.5V37Z" fill="#0B172A"/>
+      <path d="M391 7H401L422 56H410L396 21L382 56H370Z" fill="#00C88B"/>
+    </svg>`);
+  const TECHVAYA_WORDMARK_DARK = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 62">
+      <path d="M4 8H44V18H29.5V56H18.5V18H4Z" fill="#FFFFFF"/>
+      <path d="M54 8H92V17.5H65V27H88V36H65V46.5H93V56H54Z" fill="#FFFFFF"/>
+      <path d="M128 8C139 8 146 12 150 17L142 24C139 20 134 18 128 18C117 18 111 24 111 32C111 40 117 46 128 46C134 46 139 44 142 40L150 47C146 52 139 56 128 56C110 56 99 45 99 32C99 19 110 8 128 8Z" fill="#FFFFFF"/>
+      <path d="M160 8H171V27H193V8H204V56H193V37H171V56H160Z" fill="#FFFFFF"/>
+      <path d="M213 8H225L238 41L251 8H263L243 56H233Z" fill="#FFFFFF"/>
+      <path d="M286 7H296L317 56H305L291 21L277 56H265Z" fill="#0099FF"/>
+      <path d="M318 8H331L343 27L355 8H368L348.5 37V56H337.5V37Z" fill="#FFFFFF"/>
+      <path d="M391 7H401L422 56H410L396 21L382 56H370Z" fill="#00C88B"/>
+    </svg>`);
+</script>
+
+<!-- TECHVAYA BRAND MARK / LOGO -->
+<svg width="0" height="0" aria-hidden="true" class="absolute"><defs>
+  <linearGradient id="tv-loop-left" x1="0%" y1="15%" x2="95%" y2="85%"><stop offset="0%" stop-color="#042E6F"/><stop offset="45%" stop-color="#0066E6"/><stop offset="100%" stop-color="#00A8FF"/></linearGradient>
+  <linearGradient id="tv-loop-right" x1="0%" y1="80%" x2="100%" y2="15%"><stop offset="0%" stop-color="#0068B5"/><stop offset="35%" stop-color="#00A8B5"/><stop offset="100%" stop-color="#00D084"/></linearGradient>
+  <linearGradient id="tv-loop-bridge" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0088FF"/><stop offset="48%" stop-color="#00B4FF"/><stop offset="100%" stop-color="#00C88B"/></linearGradient>
+  <filter id="tv-shadow" x="-15%" y="-15%" width="130%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#010A17" flood-opacity=".55"/></filter>
+  <symbol id="techvaya-mark" viewBox="0 0 210 105">
+    <path d="M55 82C24 82 14 58 14 52.5C14 35 30 20 55 20C78 20 96 42 108 56C120 70 134 82 154 82C178 82 190 65 190 52.5C190 36 176 20 154 20C134 20 120 34 108 48" fill="none" stroke="url(#tv-loop-right)" stroke-width="21" stroke-linecap="round"/>
+    <path d="M96 63C82 77 69 83 55 83C29 83 14 68 14 52.5C14 35 30 20 55 20C75 20 90 34 106 52" fill="none" stroke="url(#tv-loop-left)" stroke-width="22" stroke-linecap="round"/>
+    <path d="M113 42C126 26 138 20 154 20C176 20 190 35 190 52.5C190 69 176 83 154 83C138 83 124 75 110 59" fill="none" stroke="url(#tv-loop-right)" stroke-width="21" stroke-linecap="round"/>
+    <path d="M48 20C72 20 89 34 105 52.5C121 71 136 83 156 83" fill="none" stroke="url(#tv-loop-bridge)" stroke-width="22" stroke-linecap="round" filter="url(#tv-shadow)"/>
+    <g stroke="#fff" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".95"><polyline points="5,39 20,39 27,31 37,31"/><circle cx="39.5" cy="31" r="2.6" fill="#043882"/><polyline points="4,49 17,49 25,41 33,41"/><circle cx="35.5" cy="41" r="2.6" fill="#043882"/><polyline points="6,59 19,59 27,52"/><circle cx="29" cy="50.5" r="2.6" fill="#043882"/></g>
+    <g><rect x="179" y="48" width="7" height="7" rx="1" fill="#020D1C" opacity=".35"/><rect x="193" y="27" width="6.5" height="6.5" rx="1" fill="#00D084"/><rect x="187" y="38" width="8.5" height="8.5" rx="1.2" fill="#00C88B"/><rect x="199" y="39" width="8" height="8" rx="1.2" fill="#00D084"/><rect x="193" y="51" width="9" height="9" rx="1.2" fill="#00B894"/><rect x="203" y="57" width="6.5" height="6.5" rx="1" fill="#00D084"/><rect x="190" y="64" width="7.5" height="7.5" rx="1" fill="#00C88B"/></g>
+  </symbol>
+</defs></svg>
+
+<header class="fixed top-3 inset-x-3 sm:inset-x-6 z-50">
+  <nav class="glass-nav max-w-7xl mx-auto rounded-2xl shadow-xl" aria-label="Primary navigation">
+    <div class="h-[72px] px-4 sm:px-6 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3 group" aria-label="TECHVAYA SOLUTIONS home">
+        <svg viewBox="0 0 210 105" class="h-11 w-[88px] sm:h-12 sm:w-[96px] transition-transform group-hover:scale-105" aria-hidden="true"><use href="#techvaya-mark"/></svg>
+        <span class="hidden sm:flex flex-col leading-none items-start justify-center"><img id="headerWordmark" src="" alt="TECHVAYA" class="h-[25px] w-[174px] object-contain object-left dark:hidden"><img id="headerWordmarkDark" src="" alt="TECHVAYA" class="hidden h-[25px] w-[174px] object-contain object-left dark:block"><span class="mt-1 text-[8px] font-bold tracking-[.22em] text-slate-500 dark:text-slate-400">SOLUTIONS</span></span>
+      </a>
+      <div class="hidden lg:flex items-center gap-1 text-sm font-semibold text-slate-600 dark:text-slate-300">
+        <a class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5 hover:text-tv-cyan" href="#home">Home</a><a class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5 hover:text-tv-cyan" href="#about">About</a><a class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5 hover:text-tv-cyan" href="#solutions">Solutions</a><a class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5 hover:text-tv-cyan" href="#industries">Industries</a><a class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5 hover:text-tv-cyan" href="#why-us">Why Us</a><a class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5 hover:text-tv-cyan" href="#contact">Contact</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="w-10 h-10 rounded-xl hover:bg-slate-100 dark:hover:bg-white/10" aria-label="Switch theme"><i class="fa-solid fa-moon"></i></button>
+        <a href="#contact" class="hidden sm:inline-flex brand-button text-white px-4 py-2.5 rounded-xl text-sm font-bold">Request Demo / Consult <i class="fa-solid fa-arrow-right ml-2"></i></a>
+        <button id="menuButton" class="lg:hidden w-10 h-10 rounded-xl hover:bg-slate-100 dark:hover:bg-white/10" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200/70 dark:border-white/10 p-3">
+      <div class="grid gap-1 text-sm font-semibold"><a class="p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5" href="#home">Home</a><a class="p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5" href="#about">About</a><a class="p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5" href="#solutions">Solutions</a><a class="p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5" href="#industries">Industries</a><a class="p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5" href="#why-us">Why Us</a><a class="p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5" href="#contact">Contact</a><a class="brand-button text-white p-3 rounded-xl text-center mt-1" href="#contact">Request Demo / Consult</a></div>
+    </div>
+  </nav>
+</header>
 
 <main>
-<section id="home" class="relative overflow-hidden pt-32 sm:pt-36"><div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_20%,rgba(8,183,232,.16),transparent_30%),radial-gradient(circle_at_85%_30%,rgba(22,199,165,.12),transparent_28%)]"></div><div class="gridbg absolute inset-x-0 top-0 -z-10 h-[720px]"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 lg:pb-28 grid lg:grid-cols-[1.08fr_.92fr] gap-12 items-center"><div class="reveal"><span class="inline-flex items-center gap-2 rounded-full border border-cyan/20 bg-cyan/5 px-4 py-2 text-xs font-extrabold uppercase tracking-[.18em] text-cyan-700 dark:text-cyan-300"><span class="w-2 h-2 rounded-full bg-teal"></span>Enterprise Technology Systems Integrator</span><h1 class="display mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-.04em] leading-[1.08]">Connect technology.<br><span class="gradtext">Transform enterprise.</span></h1><p class="mt-6 max-w-2xl text-base sm:text-lg leading-8 text-slate-600 dark:text-slate-300">TECHVAYA SOLUTIONS integrates best-of-breed hardware and software from leading OEMs into practical, scalable systems that improve security, operations, energy performance and workplace experience.</p><div class="mt-8 flex flex-col sm:flex-row gap-3"><a href="#contact" class="rounded-xl px-6 py-3.5 text-sm font-extrabold text-white bg-gradient-to-r from-[#0878e6] via-[#08b7e8] to-[#16c7a5] text-center">Request a Consultation <i class="fa-solid fa-arrow-right ml-2"></i></a><a href="#solutions" class="rounded-xl px-6 py-3.5 text-sm font-bold border border-slate-300 bg-white/70 text-center dark:border-white/15 dark:bg-white/5">Explore Solutions <i class="fa-solid fa-grid-2 ml-2"></i></a></div><div class="mt-10 grid grid-cols-3 gap-3 max-w-xl"><div class="rounded-2xl bg-white/70 border border-slate-200 p-4 dark:bg-white/5 dark:border-white/10"><b class="text-2xl">OEM</b><p class="text-xs text-slate-500">Agnostic</p></div><div class="rounded-2xl bg-white/70 border border-slate-200 p-4 dark:bg-white/5 dark:border-white/10"><b class="text-2xl">360°</b><p class="text-xs text-slate-500">Integration</p></div><div class="rounded-2xl bg-white/70 border border-slate-200 p-4 dark:bg-white/5 dark:border-white/10"><b class="text-2xl">B2B</b><p class="text-xs text-slate-500">Enterprise</p></div></div></div>
-<div class="reveal rounded-[2rem] bg-white/80 p-4 shadow-2xl dark:bg-white/[.04]"><div class="relative overflow-hidden rounded-[1.5rem] bg-[#07152f]"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85" alt="Enterprise technology circuit board" class="h-[430px] w-full object-cover opacity-70"><div class="absolute inset-0 bg-gradient-to-br from-transparent to-[#07152f]"></div><div class="absolute left-6 right-6 bottom-6 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 p-5 text-white"><div class="flex items-center gap-3"><span class="grid w-11 h-11 place-items-center rounded-xl bg-cyan/15 text-cyan"><i class="fa-solid fa-network-wired"></i></span><div><p class="text-xs uppercase tracking-[.16em] text-cyan-200 font-bold">TECHVAYA</p><b>Connecting technology ecosystems</b></div></div><div class="mt-5 grid grid-cols-3 gap-2 text-xs text-center"><span class="rounded-xl bg-white/10 p-3">Secure</span><span class="rounded-xl bg-white/10 p-3">Connected</span><span class="rounded-xl bg-white/10 p-3">Scalable</span></div></div></div></div></div></section>
+  <section id="home" class="relative overflow-hidden pt-32 sm:pt-36 lg:pt-40 grid-bg">
+    <div class="absolute inset-0 -z-10 hero-glow"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 lg:pb-28 grid lg:grid-cols-[1.05fr_.95fr] gap-12 lg:gap-16 items-center">
+      <div class="reveal">
+        <div class="inline-flex items-center gap-2 rounded-full border border-tv-cyan/25 bg-tv-cyan/5 px-4 py-2 text-xs font-bold uppercase tracking-[.16em] text-sky-700 dark:text-sky-200"><span class="w-2 h-2 rounded-full bg-tv-emerald animate-pulse"></span>Enterprise Technology Systems Integrator</div>
+        <h1 class="display mt-6 text-4xl sm:text-5xl lg:text-[4.15rem] font-extrabold leading-[1.05] tracking-[-.045em]">Connecting Technology.<br><span class="brand-gradient">Empowering Enterprises.</span></h1>
+        <p class="mt-6 max-w-2xl text-base sm:text-lg leading-8 muted">TECHVAYA SOLUTIONS brings together best-fit hardware and software from leading OEM ecosystems to create secure, connected and scalable technology environments for enterprise facilities, industrial operations and corporate campuses.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3"><a href="#contact" class="brand-button text-white px-6 py-3.5 rounded-xl text-sm font-extrabold text-center">Schedule a Consultation <i class="fa-solid fa-arrow-right ml-2"></i></a><a href="#solutions" class="px-6 py-3.5 rounded-xl text-sm font-bold border border-slate-300 bg-white/70 dark:border-white/15 dark:bg-white/5 text-center">Explore Core Solutions <i class="fa-solid fa-cubes ml-2 text-tv-cyan"></i></a></div><div class="mt-8 grid grid-cols-3 gap-3"><div class="rounded-2xl border p-4 bg-white/75 dark:bg-white/[.045] border-slate-200 dark:border-white/10"><b class="display text-lg sm:text-2xl">OEM</b><p class="text-[11px] sm:text-xs muted mt-1">Agnostic approach</p></div><div class="rounded-2xl border p-4 bg-white/75 dark:bg-white/[.045] border-slate-200 dark:border-white/10"><b class="display text-lg sm:text-2xl">360°</b><p class="text-[11px] sm:text-xs muted mt-1">Integration mindset</p></div><div class="rounded-2xl border p-4 bg-white/75 dark:bg-white/[.045] border-slate-200 dark:border-white/10"><b class="display text-lg sm:text-2xl">B2B</b><p class="text-[11px] sm:text-xs muted mt-1">Enterprise focus</p></div></div>
+      </div>
+      <div class="reveal rounded-[2rem] p-3 sm:p-4 bg-white/80 dark:bg-white/[.04] border border-slate-200 dark:border-white/10 shadow-2xl">
+        <div class="relative overflow-hidden rounded-[1.5rem] bg-tv-navy"><img data-image="hero" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85" alt="Enterprise technology and digital infrastructure" class="w-full h-[390px] sm:h-[470px] object-cover opacity-65"><div class="absolute inset-0 bg-gradient-to-br from-transparent via-tv-navy/10 to-tv-navy"></div><div class="absolute left-5 right-5 bottom-5 rounded-2xl bg-slate-950/45 backdrop-blur-xl border border-white/10 p-5 text-white"><div class="flex items-center gap-3"><div class="grid place-items-center w-11 h-11 rounded-xl bg-tv-cyan/15 text-tv-cyan"><i class="fa-solid fa-network-wired"></i></div><div><div class="text-[10px] uppercase tracking-[.2em] text-sky-200 font-bold">TECHVAYA</div><b class="text-sm sm:text-base">Technology + Integration + Impact</b></div></div><div class="mt-4 grid grid-cols-3 gap-2 text-xs text-center"><span class="rounded-xl bg-white/10 p-2.5">Secure</span><span class="rounded-xl bg-white/10 p-2.5">Connected</span><span class="rounded-xl bg-white/10 p-2.5">Scalable</span></div></div></div>
+      </div>
+    </div>
+  </section>
 
-<section id="about" class="py-20 bg-white border-y border-slate-200 dark:bg-[#07152f] dark:border-white/10"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[.9fr_1.1fr] gap-12 items-center"><div class="reveal"><p class="text-sm font-extrabold uppercase tracking-[.18em] text-cyan-600 dark:text-cyan-300">About Techvaya</p><h2 class="display mt-4 text-3xl sm:text-4xl font-extrabold">Technology integration with an enterprise mindset.</h2><p class="mt-5 max-w-xl leading-8 text-slate-600 dark:text-slate-300">We work across OEM technologies and enterprise environments to turn individual products into connected, outcome-focused systems. Our approach is consultative, architecture-led and designed for long-term operational value.</p></div><div class="grid sm:grid-cols-2 gap-4"><!-- VALUE CARD --><article class="card reveal rounded-2xl border p-6 bg-slate-50 dark:bg-white/5 dark:border-white/10"><i class="fa-solid fa-compass-drafting text-cyan-500 text-xl"></i><h3 class="mt-4 font-extrabold">OEM-agnostic consulting</h3><p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">Select technology based on business requirements, architecture and total value.</p></article><!-- VALUE CARD --><article class="card reveal rounded-2xl border p-6 bg-slate-50 dark:bg-white/5 dark:border-white/10"><i class="fa-solid fa-diagram-project text-teal-500 text-xl"></i><h3 class="mt-4 font-extrabold">Seamless integration</h3><p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">Connect people, processes, devices, applications and data into one ecosystem.</p></article><!-- VALUE CARD --><article class="card reveal rounded-2xl border p-6 bg-slate-50 dark:bg-white/5 dark:border-white/10"><i class="fa-solid fa-expand text-cyan-500 text-xl"></i><h3 class="mt-4 font-extrabold">Scalable architecture</h3><p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">Design for today's site while keeping a path open for future technologies.</p></article><!-- VALUE CARD --><article class="card reveal rounded-2xl border p-6 bg-slate-50 dark:bg-white/5 dark:border-white/10"><i class="fa-solid fa-headset text-teal-500 text-xl"></i><h3 class="mt-4 font-extrabold">Lifecycle support</h3><p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">Support deployment, adoption, optimization and technology evolution.</p></article></div></div></section>
+  <section id="about" class="py-20 sm:py-24 border-y section-rule bg-white dark:bg-tv-navy">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[.82fr_1.18fr] gap-12 items-center">
+      <div class="reveal"><p class="text-xs sm:text-sm font-extrabold uppercase tracking-[.18em] text-tv-cyan">About TECHVAYA</p><h2 class="display mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">Technology integration with an enterprise mindset.</h2><p class="mt-5 leading-8 muted">Our role is not simply to supply products. We understand the business requirement, architect the technology ecosystem, coordinate the right OEM technologies and support the deployment through its operational life.</p><div class="mt-7 inline-flex items-center gap-3 rounded-2xl border p-4 bg-slate-50 dark:bg-white/[.04] border-slate-200 dark:border-white/10"><span class="grid w-10 h-10 place-items-center rounded-xl bg-tv-cyan/10 text-tv-cyan"><i class="fa-solid fa-link"></i></span><div><div class="font-bold">TECHVAYA = Technology + Anvaya</div><div class="text-xs muted">Connection &amp; Integration</div></div></div></div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <article class="card reveal rounded-2xl p-6"><i class="fa-solid fa-scale-balanced text-tv-cyan text-xl"></i><h3 class="mt-4 font-extrabold">OEM-agnostic consulting</h3><p class="mt-2 text-sm leading-7 muted">Choose the technology that fits the application, architecture and business requirement rather than forcing a single manufacturer's stack.</p></article>
+        <article class="card reveal rounded-2xl p-6"><i class="fa-solid fa-diagram-project text-tv-cyan text-xl"></i><h3 class="mt-4 font-extrabold">Seamless integration</h3><p class="mt-2 text-sm leading-7 muted">Connect security, video, energy, building systems and location intelligence into a coherent operating environment.</p></article>
+        <article class="card reveal rounded-2xl p-6"><i class="fa-solid fa-layer-group text-tv-cyan text-xl"></i><h3 class="mt-4 font-extrabold">Scalable architecture</h3><p class="mt-2 text-sm leading-7 muted">Start with one solution, site or building and expand without designing the technology ecosystem from scratch.</p></article>
+        <article class="card reveal rounded-2xl p-6"><i class="fa-solid fa-headset text-tv-cyan text-xl"></i><h3 class="mt-4 font-extrabold">Post-deployment support</h3><p class="mt-2 text-sm leading-7 muted">Maintain operational continuity through structured support, AMC and future enhancement opportunities.</p></article>
+      </div>
+    </div>
+  </section>
 
-<section id="solutions" class="py-20 sm:py-24"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="reveal max-w-3xl"><p class="text-sm font-extrabold uppercase tracking-[.18em] text-cyan-600 dark:text-cyan-300">Solutions</p><h2 class="display mt-4 text-3xl sm:text-4xl font-extrabold">Integrated technology for the enterprise environment.</h2><p class="mt-5 leading-8 text-slate-600 dark:text-slate-300">A modular portfolio that can evolve as customer requirements and technology ecosystems change.</p></div><div class="mt-10 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+  <section id="solutions" class="py-20 sm:py-24 grid-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12 reveal"><p class="text-xs sm:text-sm font-extrabold uppercase tracking-[.18em] text-tv-teal">Enterprise Portfolio</p><h2 class="display mt-3 text-3xl sm:text-4xl font-extrabold">Our Core <span class="brand-gradient">Enterprise Solutions</span></h2><p class="mt-4 leading-8 muted">Best-fit technology solutions, connected for the enterprise.</p></div>
+      <div id="solutions-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
 
-<!-- START SOLUTION CARD -->
-<article class="solution card reveal overflow-hidden rounded-3xl border bg-white dark:bg-white/[.045] dark:border-white/10"><div class="relative h-56 overflow-hidden"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=85" alt="Visitor management and digital check-in" class="w-full h-full object-cover" loading="lazy"><div class="absolute inset-0 bg-gradient-to-t from-[#07152f]/90 to-transparent"></div><div class="absolute bottom-5 left-5 text-white"><small class="uppercase tracking-[.15em] text-cyan-200 font-bold">01 · Security & Experience</small><h3 class="text-xl font-extrabold mt-1">Visitor Management</h3></div></div><div class="p-6"><p class="text-sm leading-7 text-slate-600 dark:text-slate-300">Digitize visitor registration, approvals, QR-based check-in, security workflows and multi-site visibility.</p><ul class="mt-5 space-y-2 text-sm text-slate-600 dark:text-slate-400"><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Faster, professional check-in</li><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Security and audit visibility</li><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Enterprise integrations</li></ul><a href="#contact" class="inline-flex mt-6 text-sm font-extrabold text-cyan-700 dark:text-cyan-300">Discuss solution <i class="fa-solid fa-arrow-right ml-2"></i></a></div></article>
-<!-- END SOLUTION CARD -->
+        <!-- ================= START SOLUTION CARD ================= -->
+        <article id="solution-visitor" class="solution-card card rounded-3xl overflow-hidden flex flex-col" data-category="security">
+          <div class="relative h-52 overflow-hidden bg-tv-navy"><img data-image="visitor" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85" alt="Visitor management and corporate reception" class="solution-img w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-tv-navy via-tv-navy/30 to-transparent"></div><div class="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-950/75 text-sky-200 border border-sky-400/25">Smart Workplace &amp; Access</div><div class="absolute bottom-4 left-5 grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-tv-blue to-tv-cyan text-white shadow-lg"><i class="fa-solid fa-id-card-clip"></i></div></div>
+          <div class="p-6 flex-1"><h3 class="display mt-2 text-xl font-extrabold">Visitor Management</h3><p class="mt-3 text-sm leading-7 muted">Digital visitor workflows for corporate campuses, industrial gates and multi-site environments, from pre-registration through check-in, host notification and visitor records.</p><ul class="mt-5 pt-4 border-t section-rule space-y-2 text-sm muted"><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Pre-registration, QR-based check-in and badge workflows</li><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Watchlist, compliance and audit-oriented workflows</li><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Live dashboards and multi-site visibility</li></ul></div>
+          <div class="px-6 pb-6"><button type="button" data-solution="Visitor Management" class="solutionCta text-sm font-bold text-tv-cyan hover:text-tv-teal">Discuss this solution <i class="fa-solid fa-arrow-right ml-1"></i></button></div>
+        </article>
+        <!-- ================= END SOLUTION CARD ================= -->
 
-<!-- START SOLUTION CARD -->
-<article class="solution card reveal overflow-hidden rounded-3xl border bg-white dark:bg-white/[.045] dark:border-white/10"><div class="relative h-56 overflow-hidden"><img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1400&q=85" alt="Video surveillance and analytics" class="w-full h-full object-cover" loading="lazy"><div class="absolute inset-0 bg-gradient-to-t from-[#07152f]/90 to-transparent"></div><div class="absolute bottom-5 left-5 text-white"><small class="uppercase tracking-[.15em] text-cyan-200 font-bold">02 · AI & Security</small><h3 class="text-xl font-extrabold mt-1">Video Analytics</h3></div></div><div class="p-6"><p class="text-sm leading-7 text-slate-600 dark:text-slate-300">Turn video infrastructure into an intelligent operational layer with AI-driven event detection and actionable alerts.</p><ul class="mt-5 space-y-2 text-sm text-slate-600 dark:text-slate-400"><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Real-time event detection</li><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Security and safety use cases</li><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Scalable analytics architecture</li></ul><a href="#contact" class="inline-flex mt-6 text-sm font-extrabold text-cyan-700 dark:text-cyan-300">Discuss solution <i class="fa-solid fa-arrow-right ml-2"></i></a></div></article>
-<!-- END SOLUTION CARD -->
+        <!-- ================= START SOLUTION CARD ================= -->
+        <article id="solution-video" class="solution-card card rounded-3xl overflow-hidden flex flex-col" data-category="security">
+          <div class="relative h-52 overflow-hidden bg-tv-navy"><img data-image="video" src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1400&q=85" alt="AI video analytics and surveillance monitoring" class="solution-img w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-tv-navy via-tv-navy/30 to-transparent"></div><div class="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-950/75 text-sky-200 border border-sky-400/25">AI Video Intelligence</div><div class="absolute bottom-4 left-5 grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-tv-blue to-tv-cyan text-white shadow-lg"><i class="fa-solid fa-video"></i></div></div>
+          <div class="p-6 flex-1"><h3 class="display mt-2 text-xl font-extrabold">Video Analytics</h3><p class="mt-3 text-sm leading-7 muted">AI-enabled video intelligence that turns camera streams into actionable events for security, safety, operational awareness and facility monitoring.</p><ul class="mt-5 pt-4 border-t section-rule space-y-2 text-sm muted"><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Event detection and real-time alerts</li><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Safety, security and operational use cases</li><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Scalable analytics across facilities and cameras</li></ul></div>
+          <div class="px-6 pb-6"><button type="button" data-solution="Video Analytics" class="solutionCta text-sm font-bold text-tv-cyan hover:text-tv-teal">Discuss this solution <i class="fa-solid fa-arrow-right ml-1"></i></button></div>
+        </article>
+        <!-- ================= END SOLUTION CARD ================= -->
 
-<!-- START SOLUTION CARD -->
-<article class="solution card reveal overflow-hidden rounded-3xl border bg-white dark:bg-white/[.045] dark:border-white/10"><div class="relative h-56 overflow-hidden"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85" alt="Smart building and energy management" class="w-full h-full object-cover" loading="lazy"><div class="absolute inset-0 bg-gradient-to-t from-[#07152f]/90 to-transparent"></div><div class="absolute bottom-5 left-5 text-white"><small class="uppercase tracking-[.15em] text-cyan-200 font-bold">03 · Energy & Facilities</small><h3 class="text-xl font-extrabold mt-1">EMS & BMS</h3></div></div><div class="p-6"><p class="text-sm leading-7 text-slate-600 dark:text-slate-300">Connect building systems, energy data and operational controls to improve efficiency, comfort, visibility and sustainability.</p><ul class="mt-5 space-y-2 text-sm text-slate-600 dark:text-slate-400"><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Smart HVAC and facility control</li><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Power and energy optimization</li><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Unified operational visibility</li></ul><a href="#contact" class="inline-flex mt-6 text-sm font-extrabold text-cyan-700 dark:text-cyan-300">Discuss solution <i class="fa-solid fa-arrow-right ml-2"></i></a></div></article>
-<!-- END SOLUTION CARD -->
+        <!-- ================= START SOLUTION CARD ================= -->
+        <article id="solution-ems" class="solution-card card rounded-3xl overflow-hidden flex flex-col" data-category="operations">
+          <div class="relative h-52 overflow-hidden bg-tv-navy"><img data-image="ems" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85" alt="Smart building and energy management" class="solution-img w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-tv-navy via-tv-navy/30 to-transparent"></div><div class="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-950/75 text-sky-200 border border-sky-400/25">Smart Buildings &amp; Energy</div><div class="absolute bottom-4 left-5 grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-tv-blue to-tv-cyan text-white shadow-lg"><i class="fa-solid fa-building-circle-check"></i></div></div>
+          <div class="p-6 flex-1"><h3 class="display mt-2 text-xl font-extrabold">EMS &amp; BMS</h3><p class="mt-3 text-sm leading-7 muted">Energy and building management capabilities for connected facilities, helping operations teams monitor assets, consumption, environment and building performance.</p><ul class="mt-5 pt-4 border-t section-rule space-y-2 text-sm muted"><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Building and facility system integration</li><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Energy monitoring and operational visibility</li><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Scalable IoT-to-dashboard architecture</li></ul></div>
+          <div class="px-6 pb-6"><button type="button" data-solution="EMS / BMS" class="solutionCta text-sm font-bold text-tv-cyan hover:text-tv-teal">Discuss this solution <i class="fa-solid fa-arrow-right ml-1"></i></button></div>
+        </article>
+        <!-- ================= END SOLUTION CARD ================= -->
 
-<!-- START SOLUTION CARD -->
-<article class="solution card reveal overflow-hidden rounded-3xl border bg-white dark:bg-white/[.045] dark:border-white/10"><div class="relative h-56 overflow-hidden"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=85" alt="Industrial location tracking and connected operations" class="w-full h-full object-cover" loading="lazy"><div class="absolute inset-0 bg-gradient-to-t from-[#07152f]/90 to-transparent"></div><div class="absolute bottom-5 left-5 text-white"><small class="uppercase tracking-[.15em] text-cyan-200 font-bold">04 · RTLS & IoT</small><h3 class="text-xl font-extrabold mt-1">Real-Time Location System</h3></div></div><div class="p-6"><p class="text-sm leading-7 text-slate-600 dark:text-slate-300">Track assets, people, forklifts and material-handling equipment across indoor and outdoor environments in real time.</p><ul class="mt-5 space-y-2 text-sm text-slate-600 dark:text-slate-400"><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Asset and workforce visibility</li><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Safety and process optimization</li><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>BLE, UWB, GPS and IoT options</li></ul><a href="#contact" class="inline-flex mt-6 text-sm font-extrabold text-cyan-700 dark:text-cyan-300">Discuss solution <i class="fa-solid fa-arrow-right ml-2"></i></a></div></article>
-<!-- END SOLUTION CARD -->
+        <!-- ================= START SOLUTION CARD ================= -->
+        <article id="solution-rtls" class="solution-card card rounded-3xl overflow-hidden flex flex-col" data-category="operations">
+          <div class="relative h-52 overflow-hidden bg-tv-navy"><img data-image="rtls" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=85" alt="Industrial real-time location and asset tracking" class="solution-img w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-tv-navy via-tv-navy/30 to-transparent"></div><div class="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-950/75 text-sky-200 border border-sky-400/25">Real-Time Location</div><div class="absolute bottom-4 left-5 grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-tv-blue to-tv-cyan text-white shadow-lg"><i class="fa-solid fa-location-crosshairs"></i></div></div>
+          <div class="p-6 flex-1"><h3 class="display mt-2 text-xl font-extrabold">RTLS</h3><p class="mt-3 text-sm leading-7 muted">Real-Time Location System capabilities for people, assets, equipment, material movement and operational visibility across industrial environments.</p><ul class="mt-5 pt-4 border-t section-rule space-y-2 text-sm muted"><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Asset, people, equipment and MHE visibility</li><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>BLE, UWB, RFID and IoT-ready approaches</li><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Operational intelligence and traceability</li></ul></div>
+          <div class="px-6 pb-6"><button type="button" data-solution="RTLS" class="solutionCta text-sm font-bold text-tv-cyan hover:text-tv-teal">Discuss this solution <i class="fa-solid fa-arrow-right ml-1"></i></button></div>
+        </article>
+        <!-- ================= END SOLUTION CARD ================= -->
 
-<!-- START SOLUTION CARD -->
-<article class="solution card reveal overflow-hidden rounded-3xl border bg-white dark:bg-white/[.045] dark:border-white/10"><div class="relative h-56 overflow-hidden"><img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1400&q=85" alt="Perimeter security and controlled access" class="w-full h-full object-cover" loading="lazy"><div class="absolute inset-0 bg-gradient-to-t from-[#07152f]/90 to-transparent"></div><div class="absolute bottom-5 left-5 text-white"><small class="uppercase tracking-[.15em] text-cyan-200 font-bold">05 · Physical Security</small><h3 class="text-xl font-extrabold mt-1">Perimeter Security</h3></div></div><div class="p-6"><p class="text-sm leading-7 text-slate-600 dark:text-slate-300">Strengthen the boundary with smart detection, integrated access control and event-driven security workflows.</p><ul class="mt-5 space-y-2 text-sm text-slate-600 dark:text-slate-400"><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Smart intrusion detection</li><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Integrated access control</li><li><i class="fa-solid fa-check text-teal-500 mr-2"></i>Automated boundary response</li></ul><a href="#contact" class="inline-flex mt-6 text-sm font-extrabold text-cyan-700 dark:text-cyan-300">Discuss solution <i class="fa-solid fa-arrow-right ml-2"></i></a></div></article>
-<!-- END SOLUTION CARD -->
+        <!-- ================= START SOLUTION CARD ================= -->
+        <article id="solution-perimeter" class="solution-card card rounded-3xl overflow-hidden flex flex-col" data-category="security">
+          <div class="relative h-52 overflow-hidden bg-tv-navy"><img data-image="perimeter" src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1400&q=85" alt="Perimeter security and facility protection" class="solution-img w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-tv-navy via-tv-navy/30 to-transparent"></div><div class="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-950/75 text-sky-200 border border-sky-400/25">Physical Security</div><div class="absolute bottom-4 left-5 grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-tv-blue to-tv-cyan text-white shadow-lg"><i class="fa-solid fa-shield-halved"></i></div></div>
+          <div class="p-6 flex-1"><h3 class="display mt-2 text-xl font-extrabold">Perimeter Security</h3><p class="mt-3 text-sm leading-7 muted">Integrated perimeter protection for industrial and enterprise sites, combining detection, assessment, response workflows and operational visibility.</p><ul class="mt-5 pt-4 border-t section-rule space-y-2 text-sm muted"><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Layered site and boundary protection</li><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Detection and intelligent event assessment</li><li><i class="fa-solid fa-circle-check text-tv-teal mr-2"></i>Integration with broader security operations</li></ul></div>
+          <div class="px-6 pb-6"><button type="button" data-solution="Perimeter Security" class="solutionCta text-sm font-bold text-tv-cyan hover:text-tv-teal">Discuss this solution <i class="fa-solid fa-arrow-right ml-1"></i></button></div>
+        </article>
+        <!-- ================= END SOLUTION CARD ================= -->
 
-<!-- START SOLUTION CARD: FUTURE PLACEHOLDER. Copy a complete card above to add a new solution. Delete this block to remove the placeholder. -->
-<article class="card reveal rounded-3xl border border-dashed border-cyan-300 bg-cyan-50/50 p-6 dark:border-cyan-400/30 dark:bg-cyan-400/[.035]"><div class="flex h-full flex-col justify-between"><div><span class="grid h-12 w-12 place-items-center rounded-xl bg-cyan/10 text-cyan-600 dark:text-cyan-300"><i class="fa-solid fa-plus"></i></span><small class="block mt-5 uppercase tracking-[.15em] text-cyan-700 dark:text-cyan-300 font-extrabold">Future-ready</small><h3 class="mt-2 text-xl font-extrabold">Add Your Next Solution</h3><p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">Copy any START/END SOLUTION CARD block, change the content and add it to this grid. The responsive layout will adapt automatically.</p></div><a href="#contact" class="mt-8 text-sm font-extrabold text-cyan-700 dark:text-cyan-300">Discuss a new requirement <i class="fa-solid fa-arrow-right ml-2"></i></a></div></article>
-<!-- END SOLUTION CARD -->
-</div></div></section>
+      </div>
+      <!-- No visible “future solution” placeholder is intentionally included. -->
+    </div>
+  </section>
 
-<section id="industries" class="bg-[#07152f] py-20 sm:py-24 text-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="reveal max-w-3xl"><p class="text-sm font-extrabold uppercase tracking-[.18em] text-cyan-300">Industries</p><h2 class="display mt-4 text-3xl sm:text-4xl font-extrabold">Built around real enterprise environments.</h2><p class="mt-5 leading-8 text-slate-300">Technology becomes valuable when it fits the operational context. Our solution approach adapts to the environment, workflows and risk profile.</p></div><div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4"><!-- INDUSTRY --><div class="card reveal rounded-2xl border border-white/10 bg-white/[.045] p-6"><i class="fa-solid fa-building text-cyan-300"></i><h3 class="mt-4 font-extrabold">IT / ITES Campuses</h3><p class="mt-2 text-sm leading-7 text-slate-400">Visitor experience, security, energy and connected campus operations.</p></div><!-- INDUSTRY --><div class="card reveal rounded-2xl border border-white/10 bg-white/[.045] p-6"><i class="fa-solid fa-industry text-cyan-300"></i><h3 class="mt-4 font-extrabold">Manufacturing & Industrials</h3><p class="mt-2 text-sm leading-7 text-slate-400">Safety, tracking, video intelligence, perimeter protection and facility efficiency.</p></div><!-- INDUSTRY --><div class="card reveal rounded-2xl border border-white/10 bg-white/[.045] p-6"><i class="fa-solid fa-flask-vial text-cyan-300"></i><h3 class="mt-4 font-extrabold">Pharma</h3><p class="mt-2 text-sm leading-7 text-slate-400">Controlled environments, traceability, security and operational visibility.</p></div><!-- INDUSTRY --><div class="card reveal rounded-2xl border border-white/10 bg-white/[.045] p-6"><i class="fa-solid fa-vial text-cyan-300"></i><h3 class="mt-4 font-extrabold">Chemical Industries</h3><p class="mt-2 text-sm leading-7 text-slate-400">Safety-focused monitoring, perimeter protection and asset/process intelligence.</p></div><!-- INDUSTRY --><div class="card reveal rounded-2xl border border-white/10 bg-white/[.045] p-6"><i class="fa-solid fa-city text-cyan-300"></i><h3 class="mt-4 font-extrabold">Commercial Real Estate</h3><p class="mt-2 text-sm leading-7 text-slate-400">Smart building operations, energy optimization, security and tenant experience.</p></div><!-- INDUSTRY --><div class="card reveal rounded-2xl border border-white/10 bg-white/[.045] p-6"><i class="fa-solid fa-warehouse text-cyan-300"></i><h3 class="mt-4 font-extrabold">Logistics & Warehousing</h3><p class="mt-2 text-sm leading-7 text-slate-400">MHE tracking, asset visibility, security and operational automation.</p></div></div></div></section>
+  <section id="industries" class="py-20 sm:py-24 bg-tv-navy text-white border-y border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="max-w-3xl reveal"><p class="text-xs sm:text-sm font-extrabold uppercase tracking-[.18em] text-tv-cyan">Industries We Serve</p><h2 class="display mt-3 text-3xl sm:text-4xl font-extrabold">Technology designed around the environment.</h2><p class="mt-4 leading-8 text-slate-300">Our solution architecture can be adapted to the operational, security and technology realities of different enterprise environments.</p></div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- INDUSTRY CARD --> <article class="card reveal rounded-2xl overflow-hidden"><img data-image="itites" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85" alt="IT and ITES campus" class="h-36 w-full object-cover"><div class="p-5"><i class="fa-solid fa-laptop-code text-tv-cyan"></i><h3 class="mt-3 font-extrabold">IT / ITES Campuses</h3><p class="mt-2 text-sm leading-6 muted">Visitor experience, workplace security, video intelligence, smart building operations and energy visibility.</p></div></article>
+        <!-- INDUSTRY CARD --> <article class="card reveal rounded-2xl overflow-hidden"><img data-image="manufacturing" src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1200&q=85" alt="Manufacturing and industrial facility" class="h-36 w-full object-cover"><div class="p-5"><i class="fa-solid fa-industry text-tv-cyan"></i><h3 class="mt-3 font-extrabold">Manufacturing &amp; Industrials</h3><p class="mt-2 text-sm leading-6 muted">Safety, tracking, video intelligence, perimeter protection and facility efficiency.</p></div></article>
+        <!-- INDUSTRY CARD --> <article class="card reveal rounded-2xl overflow-hidden"><img data-image="pharma" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=85" alt="Pharmaceutical facility" class="h-36 w-full object-cover"><div class="p-5"><i class="fa-solid fa-flask-vial text-tv-cyan"></i><h3 class="mt-3 font-extrabold">Pharma</h3><p class="mt-2 text-sm leading-6 muted">Controlled environments, traceability, security and operational visibility.</p></div></article>
+        <!-- INDUSTRY CARD --> <article class="card reveal rounded-2xl overflow-hidden"><img data-image="chemical" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=85" alt="Chemical industry facility" class="h-36 w-full object-cover"><div class="p-5"><i class="fa-solid fa-vial text-tv-cyan"></i><h3 class="mt-3 font-extrabold">Chemical Industries</h3><p class="mt-2 text-sm leading-6 muted">Safety-focused monitoring, perimeter protection and asset/process intelligence.</p></div></article>
+        <!-- INDUSTRY CARD --> <article class="card reveal rounded-2xl overflow-hidden"><img data-image="commercial" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85" alt="Commercial real estate building" class="h-36 w-full object-cover"><div class="p-5"><i class="fa-solid fa-city text-tv-cyan"></i><h3 class="mt-3 font-extrabold">Commercial Real Estate</h3><p class="mt-2 text-sm leading-6 muted">Smart building operations, energy optimization, security and tenant experience.</p></div></article>
+        <!-- INDUSTRY CARD --> <article class="card reveal rounded-2xl overflow-hidden"><img data-image="logistics" src="https://images.unsplash.com/photo-1586528116493-da8e42c6c1b6?auto=format&fit=crop&w=1200&q=85" alt="Logistics and warehousing" class="h-36 w-full object-cover"><div class="p-5"><i class="fa-solid fa-warehouse text-tv-cyan"></i><h3 class="mt-3 font-extrabold">Logistics &amp; Warehousing</h3><p class="mt-2 text-sm leading-6 muted">MHE tracking, asset visibility, security and operational automation.</p></div></article>
+      </div>
+    </div>
+  </section>
 
-<section id="why-us" class="py-20 sm:py-24"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[.85fr_1.15fr] gap-12 items-center"><div class="reveal"><p class="text-sm font-extrabold uppercase tracking-[.18em] text-cyan-600 dark:text-cyan-300">Why Techvaya</p><h2 class="display mt-4 text-3xl sm:text-4xl font-extrabold">One partner. Connected technology. Clearer outcomes.</h2><p class="mt-5 leading-8 text-slate-600 dark:text-slate-300">We combine solution discovery, OEM ecosystem access, integration thinking and enterprise execution into one practical engagement model.</p></div><div class="grid sm:grid-cols-2 gap-4"><!-- WHY --><div class="card reveal rounded-2xl border p-6 bg-white dark:bg-white/[.04] dark:border-white/10"><small class="text-cyan-600 dark:text-cyan-300 font-extrabold">01</small><h3 class="mt-3 font-extrabold">Business-first architecture</h3><p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">Start from outcomes, workflows and constraints before choosing the technology stack.</p></div><!-- WHY --><div class="card reveal rounded-2xl border p-6 bg-white dark:bg-white/[.04] dark:border-white/10"><small class="text-cyan-600 dark:text-cyan-300 font-extrabold">02</small><h3 class="mt-3 font-extrabold">Multi-OEM ecosystem</h3><p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">Bring together specialist technologies where they make the most sense.</p></div><!-- WHY --><div class="card reveal rounded-2xl border p-6 bg-white dark:bg-white/[.04] dark:border-white/10"><small class="text-cyan-600 dark:text-cyan-300 font-extrabold">03</small><h3 class="mt-3 font-extrabold">Integration mindset</h3><p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">Design the ecosystem, not just the individual product deployment.</p></div><!-- WHY --><div class="card reveal rounded-2xl border p-6 bg-white dark:bg-white/[.04] dark:border-white/10"><small class="text-cyan-600 dark:text-cyan-300 font-extrabold">04</small><h3 class="mt-3 font-extrabold">Long-term value</h3><p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">Build for scalability, serviceability and future technology additions.</p></div></div></div></section>
+  <section id="why-us" class="py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[.8fr_1.2fr] gap-12 items-center"><div class="reveal"><p class="text-xs sm:text-sm font-extrabold uppercase tracking-[.18em] text-tv-cyan">Why TECHVAYA</p><h2 class="display mt-3 text-3xl sm:text-4xl font-extrabold">One partner. Connected technology. Clearer outcomes.</h2><p class="mt-5 leading-8 muted">We combine solution discovery, OEM ecosystem access, integration thinking and enterprise execution into one practical engagement model.</p></div><div class="grid sm:grid-cols-2 gap-4">
+      <article class="card reveal rounded-2xl p-6"><h3 class="mt-3 font-extrabold">Business-first architecture</h3><p class="mt-2 text-sm leading-7 muted">Start from outcomes, workflows, constraints and operational priorities before choosing the technology stack.</p></article>
+      <article class="card reveal rounded-2xl p-6"><h3 class="mt-3 font-extrabold">Multi-OEM ecosystem</h3><p class="mt-2 text-sm leading-7 muted">Bring together specialist technologies where they make the most sense for the environment and requirement.</p></article>
+      <article class="card reveal rounded-2xl p-6"><h3 class="mt-3 font-extrabold">Integration mindset</h3><p class="mt-2 text-sm leading-7 muted">Design the connected ecosystem, not just the individual product deployment.</p></article>
+      <article class="card reveal rounded-2xl p-6"><h3 class="mt-3 font-extrabold">Long-term value</h3><p class="mt-2 text-sm leading-7 muted">Build for scalability, serviceability, support and future technology additions.</p></article>
+    </div></div>
+  </section>
 
-<section id="contact" class="py-20 sm:py-24 bg-slate-100 dark:bg-[#07152f]"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[.8fr_1.2fr] gap-10"><div class="reveal"><p class="text-sm font-extrabold uppercase tracking-[.18em] text-cyan-600 dark:text-cyan-300">Let's connect</p><h2 class="display mt-4 text-3xl sm:text-4xl font-extrabold">Tell us what you want to transform.</h2><p class="mt-5 leading-8 text-slate-600 dark:text-slate-300">Share your business requirement and our team can help identify the right technology, architecture and OEM ecosystem.</p><div class="mt-8 space-y-4 text-sm"><p><i class="fa-solid fa-envelope text-cyan-500 w-6"></i> sales@techvaya.com</p><p><i class="fa-solid fa-phone text-teal-500 w-6"></i> +91 XXXXX XXXXX</p><p><i class="fa-solid fa-location-dot text-cyan-500 w-6"></i> Vadodara, Gujarat, India</p></div></div>
-<form id="form" class="reveal rounded-3xl border bg-white p-6 sm:p-8 shadow-xl dark:bg-white/[.045] dark:border-white/10"><div class="grid sm:grid-cols-2 gap-5"><label class="text-sm font-bold">Name *<input required name="name" class="mt-2 w-full rounded-xl border p-3 font-normal bg-slate-50 dark:bg-white/5 dark:border-white/10" placeholder="Your name"></label><label class="text-sm font-bold">Company *<input required name="company" class="mt-2 w-full rounded-xl border p-3 font-normal bg-slate-50 dark:bg-white/5 dark:border-white/10" placeholder="Company name"></label><label class="text-sm font-bold">Work Email *<input required type="email" name="email" class="mt-2 w-full rounded-xl border p-3 font-normal bg-slate-50 dark:bg-white/5 dark:border-white/10" placeholder="name@company.com"></label><label class="text-sm font-bold">Phone *<input required name="phone" class="mt-2 w-full rounded-xl border p-3 font-normal bg-slate-50 dark:bg-white/5 dark:border-white/10" placeholder="+91"></label><label class="sm:col-span-2 text-sm font-bold">Solution of Interest<select name="solution" class="mt-2 w-full rounded-xl border p-3 font-normal bg-slate-50 dark:bg-white/5 dark:border-white/10"><option value="">Select</option><option>Visitor Management</option><option>Video Analytics</option><option>EMS / BMS</option><option>RTLS</option><option>Perimeter Security</option><option>Other / Digital Transformation</option></select></label><label class="sm:col-span-2 text-sm font-bold">Message *<textarea required name="message" rows="5" class="mt-2 w-full rounded-xl border p-3 font-normal bg-slate-50 dark:bg-white/5 dark:border-white/10" placeholder="Tell us about your requirement..."></textarea></label></div><button class="mt-6 w-full rounded-xl py-3.5 font-extrabold text-white bg-gradient-to-r from-[#0878e6] via-[#08b7e8] to-[#16c7a5]">Send Inquiry <i class="fa-solid fa-paper-plane ml-2"></i></button><p id="status" class="hidden mt-4 rounded-xl bg-teal-50 p-3 text-sm font-semibold text-teal-800 dark:bg-teal-400/10 dark:text-teal-200"></p><p class="mt-4 text-center text-xs text-slate-500">Connect this frontend form to your CRM/serverless endpoint before live deployment.</p></form></div></section>
+  <section id="ecosystem" class="py-16 sm:py-20 border-y section-rule bg-slate-50 dark:bg-white/[.025]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center max-w-2xl mx-auto reveal"><p class="text-xs sm:text-sm font-extrabold uppercase tracking-[.18em] text-tv-teal">Technology Ecosystem</p><h2 class="display mt-3 text-2xl sm:text-3xl font-extrabold">Best-fit technologies. One integration approach.</h2><p class="mt-3 muted">Selected technology platforms represented in our current solution portfolio.</p></div><div class="mt-8 grid grid-cols-2 md:grid-cols-5 gap-3">
+      <a href="https://www.vizitto.com/" target="_blank" rel="noopener noreferrer" class="card rounded-2xl p-5 text-center font-bold hover:text-tv-cyan">Vizitto<div class="text-[10px] muted mt-1 font-medium">Visitor Management</div></a>
+      <a href="https://trassir.com/products/analytics/" target="_blank" rel="noopener noreferrer" class="card rounded-2xl p-5 text-center font-bold hover:text-tv-cyan">TRASSIR<div class="text-[10px] muted mt-1 font-medium">Video Analytics</div></a>
+      <a href="https://tor.ai/" target="_blank" rel="noopener noreferrer" class="card rounded-2xl p-5 text-center font-bold hover:text-tv-cyan">Tor.ai<div class="text-[10px] muted mt-1 font-medium">IoT / BMS</div></a>
+      <a href="https://vitracx.com/" target="_blank" rel="noopener noreferrer" class="card rounded-2xl p-5 text-center font-bold hover:text-tv-cyan">Vitracx<div class="text-[10px] muted mt-1 font-medium">RTLS / IoT</div></a>
+      <a href="https://security.gallagher.com/en/Solutions/Perimeter-Security" target="_blank" rel="noopener noreferrer" class="card rounded-2xl p-5 text-center font-bold hover:text-tv-cyan">Gallagher<div class="text-[10px] muted mt-1 font-medium">Perimeter Security</div></a>
+    </div></div>
+  </section>
+
+  <section id="contact" class="py-20 sm:py-24 bg-tv-navy text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[.78fr_1.22fr] gap-10 items-start">
+      <div class="reveal"><p class="text-xs sm:text-sm font-extrabold uppercase tracking-[.18em] text-tv-cyan">Let's connect</p><h2 class="display mt-3 text-3xl sm:text-4xl font-extrabold">Tell us what you want to transform.</h2><p class="mt-5 leading-8 text-slate-300">Share your requirement and our team can help identify the right solution architecture and OEM ecosystem.</p><div class="mt-8 space-y-4"><a href="mailto:info@techvaya.com" class="flex items-center gap-3 hover:text-tv-cyan"><span class="grid w-10 h-10 place-items-center rounded-xl bg-white/5 border border-white/10"><i class="fa-solid fa-envelope text-tv-cyan"></i></span><span><small class="block text-slate-400">Email</small><b>info@techvaya.com</b></span></a><a href="tel:+919427227412" class="flex items-center gap-3 hover:text-tv-cyan"><span class="grid w-10 h-10 place-items-center rounded-xl bg-white/5 border border-white/10"><i class="fa-solid fa-phone text-tv-cyan"></i></span><span><small class="block text-slate-400">Call</small><b>+91 94272 27412</b></span></a><a href="https://wa.me/919427227412?text=Hello%20TECHVAYA%20SOLUTIONS%2C%20I%20would%20like%20to%20discuss%20an%20enterprise%20technology%20requirement." target="_blank" rel="noopener noreferrer" class="wa-button inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm"><i class="fa-brands fa-whatsapp text-lg"></i> Chat on WhatsApp</a><div class="flex items-center gap-3 text-sm text-slate-400 pt-2"><i class="fa-solid fa-location-dot text-tv-cyan"></i> Vadodara, Gujarat, India</div></div></div>
+
+      <form id="consultationForm" class="reveal rounded-3xl bg-white text-slate-900 p-6 sm:p-8 shadow-2xl" action="https://formsubmit.co/info@techvaya.com" method="POST">
+        <!-- FORM BACKEND: FormSubmit currently routes inquiries to info@techvaya.com. Replace action with your CRM/webhook endpoint when available. -->
+        <input type="hidden" name="_subject" value="New TECHVAYA Enterprise Inquiry">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://techvaya.com/#contact">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="sr-only" aria-hidden="true">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <label class="text-sm font-bold">Name *<input required name="name" class="field mt-2 w-full rounded-xl p-3 font-normal" placeholder="Your name" autocomplete="name"></label>
+          <label class="text-sm font-bold">Company *<input required name="company" class="field mt-2 w-full rounded-xl p-3 font-normal" placeholder="Company name" autocomplete="organization"></label>
+          <label class="text-sm font-bold">Work Email *<input required type="email" name="email" class="field mt-2 w-full rounded-xl p-3 font-normal" placeholder="name@company.com" autocomplete="email"></label>
+          <label class="text-sm font-bold">Phone *<input required type="tel" name="phone" class="field mt-2 w-full rounded-xl p-3 font-normal" placeholder="+91 9XXXXXXXXX" autocomplete="tel"></label>
+          <label class="sm:col-span-2 text-sm font-bold">Solution of Interest<select id="solutionSelect" name="solution" class="field mt-2 w-full rounded-xl p-3 font-normal"><option value="">Select a solution</option><option>Visitor Management</option><option>Video Analytics</option><option>EMS / BMS</option><option>RTLS</option><option>Perimeter Security</option><option>Other / Digital Transformation</option></select></label>
+          <label class="sm:col-span-2 text-sm font-bold">Message *<textarea required name="message" rows="5" class="field mt-2 w-full rounded-xl p-3 font-normal" placeholder="Tell us about your requirement..."></textarea></label>
+          <label class="sm:col-span-2 flex items-start gap-3 text-xs font-medium text-slate-600"><input required type="checkbox" name="consent" value="Yes" class="mt-1 accent-sky-600"><span>I agree that TECHVAYA SOLUTIONS may contact me regarding this enquiry.</span></label>
+        </div>
+        <button id="submitButton" type="submit" class="mt-6 w-full brand-button text-white rounded-xl py-3.5 font-extrabold">Send Enterprise Inquiry <i class="fa-solid fa-paper-plane ml-2"></i></button>
+        <p id="formStatus" class="hidden mt-4 rounded-xl bg-emerald-50 p-3 text-sm font-semibold text-emerald-800" role="status"></p>
+        <p class="mt-4 text-center text-xs text-slate-500">Your enquiry is submitted securely to <strong>info@techvaya.com</strong>. For immediate contact, use WhatsApp above.</p>
+      </form>
+    </div>
+  </section>
 </main>
 
-<footer class="bg-[#040b18] py-12 text-slate-300"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid md:grid-cols-[1.4fr_.7fr_.7fr] gap-10"><div><div class="flex items-center gap-3"><span class="display text-xl font-extrabold tracking-[.15em] text-white">TECHVAYA</span></div><p class="mt-4 max-w-md text-sm leading-7 text-slate-400">TECHVAYA SOLUTIONS — Connecting Technology. Empowering Enterprises.</p><p class="mt-4 text-xs uppercase tracking-[.15em] text-slate-500">Technology × Integration × Impact</p></div><div><h3 class="font-extrabold text-white">Quick Links</h3><div class="mt-4 grid gap-3 text-sm"><a href="#about">About</a><a href="#solutions">Solutions</a><a href="#industries">Industries</a><a href="#why-us">Why Us</a><a href="#contact">Contact</a></div></div><div><h3 class="font-extrabold text-white">Solutions</h3><div class="mt-4 grid gap-3 text-sm text-slate-400"><span>Visitor Management</span><span>Video Analytics</span><span>EMS / BMS</span><span>RTLS</span><span>Perimeter Security</span></div></div></div><div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-2 text-xs text-slate-500"><span>© <span id="year"></span> TECHVAYA SOLUTIONS. All rights reserved.</span><span>Technology + Anvaya — Connection & Integration.</span></div></div></footer>
+<footer class="bg-[#020B18] text-slate-300 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid md:grid-cols-[1.4fr_.7fr_.9fr] gap-10">
+    <div>
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-3">
+        <div class="flex items-center gap-3 shrink-0">
+          <svg viewBox="0 0 210 105" class="h-10 w-[78px]" aria-hidden="true"><use href="#techvaya-mark"/></svg>
+          <div><img id="footerWordmark" src="" alt="TECHVAYA" class="h-[24px] w-[167px] object-contain object-left"><div class="text-[8px] font-bold tracking-[.22em] text-slate-500 mt-1">SOLUTIONS</div></div>
+        </div>
+        <span class="hidden sm:block h-8 w-px bg-white/10" aria-hidden="true"></span>
+        <span class="text-sm font-semibold text-slate-300">Connecting Technology. Empowering Enterprises.</span>
+      </div>
+      <p class="mt-4 max-w-md text-sm leading-7 text-slate-400">Enterprise technology solutions, integrated around your business needs.</p>
+    </div>
+    <div><h3 class="font-extrabold text-white">Quick Links</h3><div class="mt-4 grid gap-3 text-sm"><a href="#about" class="hover:text-tv-cyan">About</a><a href="#solutions" class="hover:text-tv-cyan">Solutions</a><a href="#industries" class="hover:text-tv-cyan">Industries</a><a href="#why-us" class="hover:text-tv-cyan">Why Us</a><a href="#contact" class="hover:text-tv-cyan">Contact</a></div></div>
+    <div><h3 class="font-extrabold text-white">Contact</h3><div class="mt-4 grid gap-3 text-sm text-slate-400"><a class="hover:text-tv-cyan" href="mailto:info@techvaya.com">info@techvaya.com</a><a class="hover:text-tv-cyan" href="tel:+919427227412">+91 94272 27412</a><a class="hover:text-tv-cyan" href="https://wa.me/919427227412" target="_blank" rel="noopener noreferrer">WhatsApp</a><span>Vadodara, Gujarat, India</span></div></div>
+  </div><div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-2 text-xs text-slate-500"><span>© <span id="year"></span> TECHVAYA SOLUTIONS. All rights reserved.</span><span>Connecting Technology. Empowering Enterprises.</span></div></div>
+</footer>
 
 <script>
-const root=document.documentElement,theme=document.getElementById('theme');if(localStorage.getItem('techvaya-theme')==='dark'||(!localStorage.getItem('techvaya-theme')&&matchMedia('(prefers-color-scheme:dark)').matches))root.classList.add('dark');function icon(){theme.innerHTML=root.classList.contains('dark')?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>'}icon();theme.onclick=()=>{root.classList.toggle('dark');localStorage.setItem('techvaya-theme',root.classList.contains('dark')?'dark':'light');icon()};
-const mb=document.getElementById('menub'),menu=document.getElementById('menu');mb.onclick=()=>{const open=!menu.classList.contains('hidden');menu.classList.toggle('hidden');mb.setAttribute('aria-expanded',!open);mb.innerHTML=open?'<i class="fa-solid fa-bars"></i>':'<i class="fa-solid fa-xmark"></i>'};menu.querySelectorAll('a').forEach(a=>a.onclick=()=>{menu.classList.add('hidden');mb.setAttribute('aria-expanded','false');mb.innerHTML='<i class="fa-solid fa-bars"></i>'});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-document.getElementById('form').onsubmit=e=>{e.preventDefault();const s=document.getElementById('status');s.textContent='Thank you. Your inquiry has been captured in this frontend demo. Connect the form to your CRM or backend for live submissions.';s.classList.remove('hidden');e.target.reset()};document.getElementById('year').textContent=new Date().getFullYear();
+  // Apply the centralized image map while retaining inline fallback src values.
+  document.getElementById('headerWordmark').src = TECHVAYA_WORDMARK_LIGHT;
+  document.getElementById('headerWordmarkDark').src = TECHVAYA_WORDMARK_DARK;
+  document.getElementById('footerWordmark').src = TECHVAYA_WORDMARK_DARK;
+  Object.entries(SITE_IMAGES).forEach(([key,url])=>document.querySelectorAll(`[data-image="${key}"]`).forEach(img=>img.src=url));
+
+  const root=document.documentElement, themeToggle=document.getElementById('themeToggle');
+  const savedTheme=localStorage.getItem('techvaya-theme');
+  if(savedTheme==='dark'||(!savedTheme&&window.matchMedia('(prefers-color-scheme:dark)').matches)) root.classList.add('dark');
+  function syncThemeIcon(){themeToggle.innerHTML=root.classList.contains('dark')?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>';themeToggle.setAttribute('aria-label',root.classList.contains('dark')?'Switch to light mode':'Switch to dark mode')}
+  syncThemeIcon(); themeToggle.addEventListener('click',()=>{root.classList.toggle('dark');localStorage.setItem('techvaya-theme',root.classList.contains('dark')?'dark':'light');syncThemeIcon()});
+
+  const menuButton=document.getElementById('menuButton'), mobileMenu=document.getElementById('mobileMenu');
+  menuButton.addEventListener('click',()=>{const open=!mobileMenu.classList.contains('hidden');mobileMenu.classList.toggle('hidden');menuButton.setAttribute('aria-expanded',String(!open));menuButton.innerHTML=open?'<i class="fa-solid fa-bars"></i>':'<i class="fa-solid fa-xmark"></i>'});
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.add('hidden');menuButton.setAttribute('aria-expanded','false');menuButton.innerHTML='<i class="fa-solid fa-bars"></i>'}));
+
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}}),{threshold:.10});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+  document.querySelectorAll('.solutionCta').forEach(btn=>btn.addEventListener('click',()=>{const select=document.getElementById('solutionSelect');const value=btn.dataset.solution;[...select.options].forEach((o,i)=>{if(o.value===value)select.selectedIndex=i});document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.querySelector('[name="name"]').focus(),500)}));
+
+  // Form backend: FormSubmit AJAX -> info@techvaya.com. Replace FORM_AJAX_ENDPOINT with a CRM/webhook endpoint later if required.
+  const FORM_AJAX_ENDPOINT='https://formsubmit.co/ajax/info@techvaya.com';
+  const form=document.getElementById('consultationForm'), submitButton=document.getElementById('submitButton'), formStatus=document.getElementById('formStatus');
+  form.addEventListener('submit',async event=>{
+    event.preventDefault();
+    if(form.querySelector('[name="_honey"]').value) return;
+    submitButton.disabled=true;
+    submitButton.innerHTML='<i class="fa-solid fa-circle-notch fa-spin mr-2"></i> Sending Inquiry...';
+    formStatus.classList.add('hidden');
+    try{
+      const response=await fetch(FORM_AJAX_ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)});
+      const result=await response.json();
+      if(!response.ok || result.success===false) throw new Error(result.message||'Submission failed');
+      formStatus.textContent='Thank you. Your enquiry has been sent to TECHVAYA SOLUTIONS. Our team will contact you shortly.';
+      formStatus.classList.remove('hidden');
+      form.reset();
+    }catch(error){
+      formStatus.textContent='We could not send the enquiry automatically. Please email info@techvaya.com or use WhatsApp for immediate contact.';
+      formStatus.className='mt-4 rounded-xl bg-amber-50 p-3 text-sm font-semibold text-amber-800';
+      console.error(error);
+    }finally{
+      submitButton.disabled=false;
+      submitButton.innerHTML='Send Enterprise Inquiry <i class="fa-solid fa-paper-plane ml-2"></i>';
+    }
+  });
+  document.getElementById('year').textContent=new Date().getFullYear();
 </script>
-</body></html>
+</body>
+</html>
