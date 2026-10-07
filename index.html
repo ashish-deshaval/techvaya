@@ -11,7 +11,7 @@
   <meta property="og:description" content="Connecting technology ecosystems to empower enterprise operations, security and digital transformation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://techvaya.com/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85">
+  <meta property="og:image" content="https://techvaya.com/images/hero.jpg">
   <link rel="canonical" href="https://techvaya.com/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -198,115 +198,38 @@
 <body class="antialiased selection:bg-tv-cyan selection:text-slate-950">
 
 <!-- ================================================================
-     TECHVAYA IMAGE MANAGEMENT — CHANGE IMAGES HERE
-     You normally only need to edit the URLs in the SITE_IMAGES object.
-     Recommended: 1400px+ landscape images for solution/industry cards;
-     1600px+ for hero/about images. You may use your own CDN/local path.
+     TECHVAYA IMAGE MANAGEMENT — LOCAL FILE PATHS
      ================================================================ -->
 <script>
   const SITE_IMAGES = {
-    hero: 'images/hero.jpg?auto=format&fit=crop&w=1600&q=85',
-    about: 'images/about.jpg?auto=format&fit=crop&w=1400&q=85',
-    visitor: 'images/visitor.jpg?auto=format&fit=crop&w=1400&q=85',
-    video: 'images/video.jpg?auto=format&fit=crop&w=1400&q=85',
-    ems: 'images/ems.jpg?auto=format&fit=crop&w=1400&q=85',
-    rtls: 'images/rtls.jpg?auto=format&fit=crop&w=1400&q=85',
-    perimeter: 'images/perimeter.jpg?auto=format&fit=crop&w=1400&q=85',
-    itites: 'images/itites.jpg?auto=format&fit=crop&w=1200&q=85',
-    manufacturing: 'images/manufacturing.jpg?auto=format&fit=crop&w=1200&q=85',
-    pharma: 'images/pharma.jpg?auto=format&fit=crop&w=1200&q=85',
-    chemical: 'images/chemical.jpg?auto=format&fit=crop&w=1200&q=85',
-    commercial: 'images/commercial.jpg?auto=format&fit=crop&w=1200&q=85',
-    logistics: 'images/logistics.jpg?auto=format&fit=crop&w=1200&q=85'
+    hero: 'images/hero.jpg',
+    about: 'images/about.jpg',
+    visitor: 'images/visitor.jpg',
+    video: 'images/video.jpg',
+    ems: 'images/ems.jpg',
+    rtls: 'images/rtls.jpg',
+    perimeter: 'images/perimeter.jpg',
+    itites: 'images/itites.jpg',
+    manufacturing: 'images/manufacturing.jpg',
+    pharma: 'images/pharma.jpg',
+    chemical: 'images/chemical.jpg',
+    commercial: 'images/commercial.jpg',
+    logistics: 'images/logistics.jpg'
   };
 </script>
-
-<!-- TECHVAYA WORDMARK IMAGES — Embedded SVG matching Brand Sheet -->
-<script>
-  const TECHVAYA_WORDMARK_LIGHT = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 62">
-      <path d="M4 8H44V18H29.5V56H18.5V18H4Z" fill="#041E42"/>
-      <path d="M54 8H92V17.5H65V27H88V36H65V46.5H93V56H54Z" fill="#041E42"/>
-      <path d="M128 8C139 8 146 12 150 17L142 24C139 20 134 18 128 18C117 18 111 24 111 32C111 40 117 46 128 46C134 46 139 44 142 40L150 47C146 52 139 56 128 56C110 56 99 45 99 32C99 19 110 8 128 8Z" fill="#041E42"/>
-      <path d="M160 8H171V27H193V8H204V56H193V37H171V56H160Z" fill="#041E42"/>
-      <path d="M213 8H225L238 41L251 8H263L243 56H233Z" fill="#041E42"/>
-      <path d="M286 7H296L317 56H305L291 21L277 56H265Z" fill="#0099FF"/>
-      <path d="M318 8H331L343 27L355 8H368L348.5 37V56H337.5V37Z" fill="#041E42"/>
-      <path d="M391 7H401L422 56H410L396 21L382 56H370Z" fill="#00C88B"/>
-    </svg>`);
-  const TECHVAYA_WORDMARK_DARK = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 62">
-      <path d="M4 8H44V18H29.5V56H18.5V18H4Z" fill="#FFFFFF"/>
-      <path d="M54 8H92V17.5H65V27H88V36H65V46.5H93V56H54Z" fill="#FFFFFF"/>
-      <path d="M128 8C139 8 146 12 150 17L142 24C139 20 134 18 128 18C117 18 111 24 111 32C111 40 117 46 128 46C134 46 139 44 142 40L150 47C146 52 139 56 128 56C110 56 99 45 99 32C99 19 110 8 128 8Z" fill="#FFFFFF"/>
-      <path d="M160 8H171V27H193V8H204V56H193V37H171V56H160Z" fill="#FFFFFF"/>
-      <path d="M213 8H225L238 41L251 8H263L243 56H233Z" fill="#FFFFFF"/>
-      <path d="M286 7H296L317 56H305L291 21L277 56H265Z" fill="#0099FF"/>
-      <path d="M318 8H331L343 27L355 8H368L348.5 37V56H337.5V37Z" fill="#FFFFFF"/>
-      <path d="M391 7H401L422 56H410L396 21L382 56H370Z" fill="#00C88B"/>
-    </svg>`);
-</script>
-
-<!-- TECHVAYA BRAND MARK / LOGO -->
-<svg width="0" height="0" aria-hidden="true" class="absolute">
-  <defs>
-    <linearGradient id="tv-loop-left" x1="0%" y1="15%" x2="95%" y2="85%">
-      <stop offset="0%" stop-color="#042E6F"/>
-      <stop offset="45%" stop-color="#0066E6"/>
-      <stop offset="100%" stop-color="#00A8FF"/>
-    </linearGradient>
-    <linearGradient id="tv-loop-right" x1="0%" y1="80%" x2="100%" y2="15%">
-      <stop offset="0%" stop-color="#0068B5"/>
-      <stop offset="35%" stop-color="#00A8B5"/>
-      <stop offset="100%" stop-color="#00D084"/>
-    </linearGradient>
-    <linearGradient id="tv-loop-bridge" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0088FF"/>
-      <stop offset="48%" stop-color="#00B4FF"/>
-      <stop offset="100%" stop-color="#00C88B"/>
-    </linearGradient>
-    <filter id="tv-shadow" x="-15%" y="-15%" width="130%" height="130%">
-      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#010A17" flood-opacity=".55"/>
-    </filter>
-    <symbol id="techvaya-mark" viewBox="0 0 210 105">
-      <path d="M55 82C24 82 14 58 14 52.5C14 35 30 20 55 20C78 20 96 42 108 56C120 70 134 82 154 82C178 82 190 65 190 52.5C190 36 176 20 154 20C134 20 120 34 108 48" fill="none" stroke="url(#tv-loop-right)" stroke-width="21" stroke-linecap="round"/>
-      <path d="M96 63C82 77 69 83 55 83C29 83 14 68 14 52.5C14 35 30 20 55 20C75 20 90 34 106 52" fill="none" stroke="url(#tv-loop-left)" stroke-width="22" stroke-linecap="round"/>
-      <path d="M113 42C126 26 138 20 154 20C176 20 190 35 190 52.5C190 69 176 83 154 83C138 83 124 75 110 59" fill="none" stroke="url(#tv-loop-right)" stroke-width="21" stroke-linecap="round"/>
-      <path d="M48 20C72 20 89 34 105 52.5C121 71 136 83 156 83" fill="none" stroke="url(#tv-loop-bridge)" stroke-width="22" stroke-linecap="round" filter="url(#tv-shadow)"/>
-      <g stroke="#fff" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".95">
-        <polyline points="5,39 20,39 27,31 37,31"/><circle cx="39.5" cy="31" r="2.6" fill="#043882"/>
-        <polyline points="4,49 17,49 25,41 33,41"/><circle cx="35.5" cy="41" r="2.6" fill="#043882"/>
-        <polyline points="6,59 19,59 27,52"/><circle cx="29" cy="50.5" r="2.6" fill="#043882"/>
-      </g>
-      <g>
-        <rect x="179" y="48" width="7" height="7" rx="1" fill="#020D1C" opacity=".35"/>
-        <rect x="193" y="27" width="6.5" height="6.5" rx="1" fill="#00D084"/>
-        <rect x="187" y="38" width="8.5" height="8.5" rx="1.2" fill="#00C88B"/>
-        <rect x="199" y="39" width="8" height="8" rx="1.2" fill="#00D084"/>
-        <rect x="193" y="51" width="9" height="9" rx="1.2" fill="#00B894"/>
-        <rect x="203" y="57" width="6.5" height="6.5" rx="1" fill="#00D084"/>
-        <rect x="190" y="64" width="7.5" height="7.5" rx="1" fill="#00C88B"/>
-      </g>
-    </symbol>
-  </defs>
-</svg>
 
 <!-- ================= STICKY NAVIGATION BAR ================= -->
 <header class="fixed top-3 inset-x-3 sm:inset-x-6 z-50">
   <nav class="glass-nav max-w-7xl mx-auto rounded-2xl shadow-xl" aria-label="Primary navigation">
     <div class="h-[72px] sm:h-[74px] px-3.5 sm:px-6 flex items-center justify-between gap-2">
-      <!-- Brand Lockup (Visible on both Mobile & Desktop) -->
-      <a href="#home" class="flex items-center gap-2 sm:gap-3 group shrink-0" aria-label="TECHVAYA SOLUTIONS home">
-        <svg viewBox="0 0 210 105" class="h-9 w-[72px] sm:h-12 sm:w-[96px] transition-transform group-hover:scale-105 shrink-0" aria-hidden="true">
-          <use href="#techvaya-mark"/>
-        </svg>
-        <span class="flex flex-col leading-none items-start justify-center">
-          <img id="headerWordmark" src="" alt="TECHVAYA" class="h-[19px] w-[132px] sm:h-[24px] sm:w-[170px] object-contain object-left dark:hidden">
-          <img id="headerWordmarkDark" src="" alt="TECHVAYA" class="hidden h-[19px] w-[132px] sm:h-[24px] sm:w-[170px] object-contain object-left dark:block">
-          <span class="mt-1 sm:mt-1.5 flex items-center gap-1.5 sm:gap-2 w-full">
-            <span class="h-[1.5px] w-7 sm:w-10 bg-gradient-to-r from-tv-blue to-tv-teal rounded-full"></span>
-            <span class="text-[7.5px] sm:text-[9px] font-extrabold tracking-[.24em] sm:tracking-[.26em] text-slate-600 dark:text-slate-300">SOLUTIONS</span>
-          </span>
+      <!-- TOP LEFT LOGO -->
+      <a href="#home" class="flex items-center gap-2.5 sm:gap-3 group shrink-0" aria-label="TECHVAYA SOLUTIONS home">
+        <!-- The Infinity Mark -->
+        <img src="images/logo-icon.png" alt="Techvaya Mark" class="h-8 sm:h-11 w-auto transition-transform group-hover:scale-105 shrink-0">
+        <!-- The Wordmark (Handles Light & Dark Theme Automatically) -->
+        <span class="flex flex-col justify-center shrink-0">
+          <img src="images/logo-text-light.png" alt="TECHVAYA SOLUTIONS" class="h-5 sm:h-8 w-auto max-w-[130px] sm:max-w-none object-contain object-left dark:hidden">
+          <img src="images/logo-text-dark.png" alt="TECHVAYA SOLUTIONS" class="hidden h-5 sm:h-8 w-auto max-w-[130px] sm:max-w-none object-contain object-left dark:block">
         </span>
       </a>
 
@@ -392,35 +315,29 @@
       <!-- Hero Visual Card: Clean Connected Ecosystem Overlay (Photo + 5 Live Solution Nodes) -->
       <div class="reveal rounded-[2rem] p-3 sm:p-4 bg-white/80 dark:bg-white/[.04] border border-slate-200 dark:border-white/10 shadow-2xl">
         <div class="relative overflow-hidden rounded-[1.5rem] bg-tv-navy h-[430px] sm:h-[480px]">
-          <img data-image="hero" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85" alt="Enterprise technology and digital infrastructure" class="w-full h-full object-cover opacity-40">
+          <img data-image="hero" src="images/hero.jpg" alt="Enterprise technology and digital infrastructure" class="w-full h-full object-cover opacity-40">
           <div class="absolute inset-0 bg-gradient-to-b from-tv-navy/75 via-tv-navy/55 to-tv-navy/95"></div>
 
           <!-- Interactive 5-Node Connected Ecosystem Constellation -->
           <div class="absolute inset-x-3 sm:inset-x-4 top-5 bottom-[152px] flex items-center justify-center">
             <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true">
               <defs>
-                <!-- gradientUnits="userSpaceOnUse" ensures vertical/horizontal lines render the gradient properly -->
                 <linearGradient id="node-line" gradientUnits="userSpaceOnUse" x1="60" y1="20" x2="340" y2="210">
                   <stop offset="0%" stop-color="#00A8FF" stop-opacity="0.8"/>
                   <stop offset="100%" stop-color="#00C88B" stop-opacity="0.8"/>
                 </linearGradient>
               </defs>
-              <!-- Line to Visitor Management (Top-Left) -->
               <line x1="200" y1="125" x2="86" y2="56" stroke="url(#node-line)" stroke-width="1.75" stroke-dasharray="4 4"/>
-              <!-- Line to EMS & BMS (Top-Center) -->
               <line x1="200" y1="125" x2="200" y2="24" stroke="url(#node-line)" stroke-width="1.75" stroke-dasharray="4 4"/>
-              <!-- Line to Video Analytics (Top-Right) -->
               <line x1="200" y1="125" x2="318" y2="56" stroke="url(#node-line)" stroke-width="1.75" stroke-dasharray="4 4"/>
-              <!-- Line to RTLS Tracking (Bottom-Left) -->
               <line x1="200" y1="125" x2="82" y2="195" stroke="url(#node-line)" stroke-width="1.75" stroke-dasharray="4 4"/>
-              <!-- Line to Perimeter Security (Bottom-Right) -->
               <line x1="200" y1="125" x2="318" y2="195" stroke="url(#node-line)" stroke-width="1.75" stroke-dasharray="4 4"/>
             </svg>
 
-            <!-- Central TECHVAYA Hub Node -->
+            <!-- CENTRAL TECHVAYA HUB NODE -->
             <div class="relative z-10 flex flex-col items-center justify-center px-4 py-2.5 rounded-2xl bg-slate-950/85 border border-tv-cyan/40 shadow-2xl backdrop-blur-md">
-              <svg viewBox="0 0 210 105" class="h-8 w-16" aria-hidden="true"><use href="#techvaya-mark"/></svg>
-              <span class="text-[9px] font-extrabold uppercase tracking-[.22em] text-white mt-0.5">TECHVAYA HUB</span>
+              <img src="images/logo-icon.png" alt="Techvaya Hub" class="h-8 w-auto">
+              <span class="text-[9px] font-extrabold uppercase tracking-[.22em] text-white mt-1">TECHVAYA HUB</span>
             </div>
 
             <!-- Node 1: Visitor Management -->
@@ -533,19 +450,11 @@
         <p class="mt-4 leading-8 muted">Best-fit technology solutions, connected for the enterprise.</p>
       </div>
 
-      <!-- ================================================================
-           MODULAR SOLUTIONS GRID
-           HOW TO ADD OR REMOVE A SOLUTION:
-           1. To ADD: Copy everything from "START SOLUTION CARD" to "END SOLUTION CARD",
-              paste it below, and update the text, image, and OEM link.
-           2. To REMOVE: Delete the entire block between START and END comments.
-           ================================================================ -->
       <div id="solutions-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
-
         <!-- ================= START SOLUTION CARD ================= -->
         <article id="solution-visitor" class="solution-card card reveal rounded-3xl overflow-hidden flex flex-col" data-category="security" data-solution="Visitor Management">
           <div class="relative h-52 overflow-hidden bg-tv-navy">
-            <img data-image="visitor" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=85" alt="Visitor management and corporate reception" loading="lazy" decoding="async" class="solution-img w-full h-full object-cover">
+            <img data-image="visitor" src="images/visitor.jpg" alt="Visitor management and corporate reception" loading="lazy" decoding="async" class="solution-img w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-tv-navy via-tv-navy/30 to-transparent"></div>
             <div class="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-950/75 text-sky-200 border border-sky-400/25">
               Smart Workplace &amp; Access
@@ -579,7 +488,7 @@
         <!-- ================= START SOLUTION CARD ================= -->
         <article id="solution-video" class="solution-card card reveal rounded-3xl overflow-hidden flex flex-col" data-category="security" data-solution="Video Analytics">
           <div class="relative h-52 overflow-hidden bg-tv-navy">
-            <img data-image="video" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85" alt="AI video analytics and surveillance monitoring" loading="lazy" decoding="async" class="solution-img w-full h-full object-cover">
+            <img data-image="video" src="images/video.jpg" alt="AI video analytics and surveillance monitoring" loading="lazy" decoding="async" class="solution-img w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-tv-navy via-tv-navy/30 to-transparent"></div>
             <div class="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-950/75 text-sky-200 border border-sky-400/25">
               AI Video Intelligence
@@ -613,7 +522,7 @@
         <!-- ================= START SOLUTION CARD ================= -->
         <article id="solution-ems" class="solution-card card reveal rounded-3xl overflow-hidden flex flex-col" data-category="operations" data-solution="EMS / BMS">
           <div class="relative h-52 overflow-hidden bg-tv-navy">
-            <img data-image="ems" src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1400&q=85" alt="Smart building and energy management" loading="lazy" decoding="async" class="solution-img w-full h-full object-cover">
+            <img data-image="ems" src="images/ems.jpg" alt="Smart building and energy management" loading="lazy" decoding="async" class="solution-img w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-tv-navy via-tv-navy/30 to-transparent"></div>
             <div class="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-950/75 text-sky-200 border border-sky-400/25">
               Smart Buildings &amp; Energy
@@ -647,7 +556,7 @@
         <!-- ================= START SOLUTION CARD ================= -->
         <article id="solution-rtls" class="solution-card card reveal rounded-3xl overflow-hidden flex flex-col" data-category="operations" data-solution="RTLS">
           <div class="relative h-52 overflow-hidden bg-tv-navy">
-            <img data-image="rtls" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=85" alt="Industrial real-time location and asset tracking" loading="lazy" decoding="async" class="solution-img w-full h-full object-cover">
+            <img data-image="rtls" src="images/rtls.jpg" alt="Industrial real-time location and asset tracking" loading="lazy" decoding="async" class="solution-img w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-tv-navy via-tv-navy/30 to-transparent"></div>
             <div class="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-950/75 text-sky-200 border border-sky-400/25">
               Real-Time Location
@@ -681,7 +590,7 @@
         <!-- ================= START SOLUTION CARD ================= -->
         <article id="solution-perimeter" class="solution-card card reveal rounded-3xl overflow-hidden flex flex-col" data-category="security" data-solution="Perimeter Security">
           <div class="relative h-52 overflow-hidden bg-tv-navy">
-            <img data-image="perimeter" src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1400&q=85" alt="Perimeter security and facility protection" loading="lazy" decoding="async" class="solution-img w-full h-full object-cover">
+            <img data-image="perimeter" src="images/perimeter.jpg" alt="Perimeter security and facility protection" loading="lazy" decoding="async" class="solution-img w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-tv-navy via-tv-navy/30 to-transparent"></div>
             <div class="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-950/75 text-sky-200 border border-sky-400/25">
               Physical Security
@@ -711,9 +620,7 @@
           </div>
         </article>
         <!-- ================= END SOLUTION CARD ================= -->
-
       </div>
-      <!-- No visible “future solution” placeholder is intentionally included. -->
     </div>
   </section>
 
@@ -733,7 +640,7 @@
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         <!-- INDUSTRY CARD 1 -->
         <article class="card reveal rounded-2xl overflow-hidden">
-          <img data-image="itites" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85" alt="IT and ITES campus" loading="lazy" decoding="async" class="h-36 w-full object-cover">
+          <img data-image="itites" src="images/itites.jpg" alt="IT and ITES campus" loading="lazy" decoding="async" class="h-36 w-full object-cover">
           <div class="p-5">
             <i class="fa-solid fa-laptop-code text-tv-cyan"></i>
             <h3 class="mt-3 font-extrabold text-slate-900 dark:text-white">IT / ITES Campuses</h3>
@@ -745,7 +652,7 @@
 
         <!-- INDUSTRY CARD 2 -->
         <article class="card reveal rounded-2xl overflow-hidden">
-          <img data-image="manufacturing" src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1200&q=85" alt="Manufacturing and industrial facility" loading="lazy" decoding="async" class="h-36 w-full object-cover">
+          <img data-image="manufacturing" src="images/manufacturing.jpg" alt="Manufacturing and industrial facility" loading="lazy" decoding="async" class="h-36 w-full object-cover">
           <div class="p-5">
             <i class="fa-solid fa-industry text-tv-cyan"></i>
             <h3 class="mt-3 font-extrabold text-slate-900 dark:text-white">Manufacturing &amp; Industrials</h3>
@@ -757,7 +664,7 @@
 
         <!-- INDUSTRY CARD 3 -->
         <article class="card reveal rounded-2xl overflow-hidden">
-          <img data-image="pharma" src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1200&q=85" alt="Pharmaceutical facility" loading="lazy" decoding="async" class="h-36 w-full object-cover">
+          <img data-image="pharma" src="images/pharma.jpg" alt="Pharmaceutical facility" loading="lazy" decoding="async" class="h-36 w-full object-cover">
           <div class="p-5">
             <i class="fa-solid fa-flask-vial text-tv-cyan"></i>
             <h3 class="mt-3 font-extrabold text-slate-900 dark:text-white">Pharma</h3>
@@ -769,7 +676,7 @@
 
         <!-- INDUSTRY CARD 4 -->
         <article class="card reveal rounded-2xl overflow-hidden">
-          <img data-image="chemical" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=85" alt="Chemical industry facility" loading="lazy" decoding="async" class="h-36 w-full object-cover">
+          <img data-image="chemical" src="images/chemical.jpg" alt="Chemical industry facility" loading="lazy" decoding="async" class="h-36 w-full object-cover">
           <div class="p-5">
             <i class="fa-solid fa-vial text-tv-cyan"></i>
             <h3 class="mt-3 font-extrabold text-slate-900 dark:text-white">Chemical Industries</h3>
@@ -781,7 +688,7 @@
 
         <!-- INDUSTRY CARD 5 -->
         <article class="card reveal rounded-2xl overflow-hidden">
-          <img data-image="commercial" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85" alt="Commercial real estate building" loading="lazy" decoding="async" class="h-36 w-full object-cover">
+          <img data-image="commercial" src="images/commercial.jpg" alt="Commercial real estate building" loading="lazy" decoding="async" class="h-36 w-full object-cover">
           <div class="p-5">
             <i class="fa-solid fa-city text-tv-cyan"></i>
             <h3 class="mt-3 font-extrabold text-slate-900 dark:text-white">Commercial Real Estate</h3>
@@ -793,7 +700,7 @@
 
         <!-- INDUSTRY CARD 6 -->
         <article class="card reveal rounded-2xl overflow-hidden">
-          <img data-image="logistics" src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=85" alt="Logistics and warehousing" loading="lazy" decoding="async" class="h-36 w-full object-cover">
+          <img data-image="logistics" src="images/logistics.jpg" alt="Logistics and warehousing" loading="lazy" decoding="async" class="h-36 w-full object-cover">
           <div class="p-5">
             <i class="fa-solid fa-warehouse text-tv-cyan"></i>
             <h3 class="mt-3 font-extrabold text-slate-900 dark:text-white">Logistics &amp; Warehousing</h3>
@@ -942,7 +849,7 @@
 
       <!-- Consultation Form -->
       <form id="consultationForm" class="reveal rounded-3xl bg-white text-slate-900 p-6 sm:p-8 shadow-2xl" action="https://formsubmit.co/info@techvaya.com" method="POST">
-        <!-- FORM BACKEND: FormSubmit routes inquiries to info@techvaya.com. Replace action with your CRM/webhook endpoint when available. -->
+        <!-- FORM BACKEND: FormSubmit routes inquiries to info@techvaya.com -->
         <input type="hidden" name="_subject" value="New TECHVAYA Enterprise Inquiry">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
@@ -972,11 +879,7 @@
           <label class="sm:col-span-2 text-sm font-bold">Solution of Interest *
             <select required id="solutionSelect" name="solution" class="field mt-2 w-full rounded-xl p-3 font-normal">
               <option value="">Select a solution</option>
-              <option value="Visitor Management">Visitor Management</option>
-              <option value="Video Analytics">Video Analytics</option>
-              <option value="EMS / BMS">EMS / BMS</option>
-              <option value="RTLS">RTLS</option>
-              <option value="Perimeter Security">Perimeter Security</option>
+              <!-- Populated by JavaScript from the Solution Cards -->
             </select>
           </label>
           <label class="sm:col-span-2 text-sm font-bold">Requirement Details *
@@ -1006,21 +909,11 @@
     <div class="grid sm:grid-cols-2 lg:grid-cols-[1.35fr_.75fr_.95fr_.95fr] gap-10">
       <!-- Column 1: Brand Identity -->
       <div>
-        <div class="flex flex-wrap items-center gap-x-4 gap-y-3">
-          <div class="flex items-center gap-3 shrink-0">
-            <svg viewBox="0 0 210 105" class="h-10 w-[78px]" aria-hidden="true">
-              <use href="#techvaya-mark"/>
-            </svg>
-            <div>
-              <img id="footerWordmark" src="" alt="TECHVAYA" class="h-[24px] w-[167px] object-contain object-left">
-              <div class="mt-1.5 flex items-center gap-2">
-                <span class="h-[1.5px] w-8 bg-gradient-to-r from-tv-blue to-tv-teal rounded-full"></span>
-                <span class="text-[8px] font-extrabold tracking-[.26em] text-slate-400">SOLUTIONS</span>
-              </div>
-            </div>
-          </div>
+        <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+          <img src="images/logo-icon.png" alt="Techvaya Mark" class="h-10 sm:h-12 w-auto shrink-0">
+          <img src="images/logo-text-dark.png" alt="TECHVAYA SOLUTIONS" class="h-7 sm:h-8 w-auto object-contain object-left shrink-0">
         </div>
-        <p class="mt-3 text-xs font-bold uppercase tracking-[.14em] text-tv-cyan">
+        <p class="mt-5 text-xs font-bold uppercase tracking-[.14em] text-tv-cyan">
           Connecting Technology. Empowering Enterprises.
         </p>
         <p class="mt-3 max-w-md text-sm leading-7 text-slate-400">
@@ -1044,11 +937,7 @@
       <div>
         <h3 class="font-extrabold text-white">Solutions</h3>
         <div id="footerSolutionsList" class="mt-4 grid gap-3 text-sm text-slate-400">
-          <a href="#solution-visitor" class="hover:text-tv-cyan transition">Visitor Management</a>
-          <a href="#solution-video" class="hover:text-tv-cyan transition">Video Analytics</a>
-          <a href="#solution-ems" class="hover:text-tv-cyan transition">EMS &amp; BMS</a>
-          <a href="#solution-rtls" class="hover:text-tv-cyan transition">RTLS</a>
-          <a href="#solution-perimeter" class="hover:text-tv-cyan transition">Perimeter Security</a>
+          <!-- Populated by JavaScript -->
         </div>
       </div>
 
@@ -1059,7 +948,7 @@
           <a class="hover:text-tv-cyan transition" href="mailto:info@techvaya.com">info@techvaya.com</a>
           <a class="hover:text-tv-cyan transition" href="tel:+919427227412">+91 94272 27412</a>
           <span>Vadodara, Gujarat, India</span>
-          <a class="hover:text-tv-cyan transition inline-flex items-center gap-1.5 text-tv-teal font-semibold" href="https://wa.me/919427227412" target="_blank" rel="noopener noreferrer">
+          <a class="hover:text-tv-cyan transition inline-flex items-center gap-1.5 text-tv-teal font-semibold mt-1" href="https://wa.me/919427227412" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
           </a>
         </div>
@@ -1074,10 +963,7 @@
 </footer>
 
 <script>
-  // 1. Apply the centralized image map & embedded SVG wordmarks
-  document.getElementById('headerWordmark').src = TECHVAYA_WORDMARK_LIGHT;
-  document.getElementById('headerWordmarkDark').src = TECHVAYA_WORDMARK_DARK;
-  document.getElementById('footerWordmark').src = TECHVAYA_WORDMARK_DARK;
+  // 1. Apply the centralized image map
   Object.entries(SITE_IMAGES).forEach(([key, url]) => {
     document.querySelectorAll(`[data-image="${key}"]`).forEach(img => {
       if (img.getAttribute('src') !== url) img.src = url;
@@ -1121,7 +1007,6 @@
   });
 
   // 4. Auto-Sync Modular Solution Cards -> Contact Form Dropdown & Footer List
-  // Adding or removing a <!-- START SOLUTION CARD --> block automatically updates the form & footer.
   function syncModularSolutions() {
     const cards = document.querySelectorAll('#solutions-grid .solution-card');
     const select = document.getElementById('solutionSelect');
